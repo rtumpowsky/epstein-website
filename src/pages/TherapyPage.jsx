@@ -31,7 +31,7 @@ export default function TherapyPage() {
         <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
           <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center mb-6">
             {/* Text - first 2 paragraphs */}
-            <div className="space-y-6 text-2xl md:text-3xl text-gray-900 leading-relaxed">
+            <div className="space-y-6 text-3xl md:text-4xl text-gray-900 leading-relaxed">
               <p>
                 Dr. Michelle brings <span className="font-bold italic">more than 30 years of professional experience</span> to her work as a Licensed Clinical Psychologist and Board Certified Executive & Leadership Coach, allowing her to provide <span className="font-bold italic">highly individualized</span> care that is tailored to meet each client's unique needs.
               </p>
@@ -49,7 +49,7 @@ export default function TherapyPage() {
           </div>
           
           {/* Third paragraph - spans full width below */}
-          <p className="text-2xl md:text-3xl text-gray-900 leading-relaxed">
+          <p className="text-3xl md:text-4xl text-gray-900 leading-relaxed">
             Skillfully crafting each session to offer <span className="font-bold italic">something of value</span> - whether a meaningful insight, valuable strategy, or thoughtful psychoeducation – Dr. Michelle provides <span className="font-bold italic">highly individualized and solution-focused</span> support that is specifically tailored to productively meet each client's unique needs, with a focus on alleviating distress, promoting self-awareness, and empowering clients to make <span className="font-bold italic">lasting and measurable</span> improvements in their mental health, relationships, and overall well-being.
           </p>
         </div>
