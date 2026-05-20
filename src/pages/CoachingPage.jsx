@@ -19,11 +19,13 @@ export default function CoachingPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-24 pb-24 px-6 bg-[#8E5B68]">
+    <div className="min-h-screen pt-28 pb-24 px-6 bg-[#8E5B68]">
       <div className="max-w-full mx-auto px-4">
         {/* Page Title */}
         <div className="mb-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">EXECUTIVE COACHING</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+            EXECUTIVE COACHING
+          </h1>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
 
@@ -47,7 +49,7 @@ export default function CoachingPage() {
             <img
               src="/headshot3.jpg"
               alt="Dr. Michelle A. Epstein"
-              className="w-full max-w-md rounded-lg shadow-xl"
+              className="w-full max-w-sm h-full rounded-lg shadow-xl"
             />
           </div>
           
@@ -59,7 +61,7 @@ export default function CoachingPage() {
 
         {/* Education & Training - BLACK BOX with WHITE BOLD text */}
         <div className="max-w-7xl mx-auto text-center mb-8">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-2 -ml-8" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             EDUCATION & TRAINING
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
@@ -73,7 +75,7 @@ export default function CoachingPage() {
               She completed a Pre-Doctoral Internship at the Boston Children's Hospital at <span className="font-bold italic">Harvard Medical School</span>, as well as a Post-Doctoral Fellowship in Trauma at <span className="font-bold italic">La Rabida Children's Hospital</span> in Chicago.
             </p>
             <p>
-              Valued for her extensive experience and expertise, Dr. Michelle has been a frequent on-air contributor to the <span className="font-bold italic">WGN-TV Morning News</span> in Chicago, and serves on the Advisory Board of the <span className="font-bold italic">Rebecca's Dream Foundation</span>, a nonprofit dedicated to reducing stigma and increasing awareness of mental illness.
+              Valued for her extensive experience and expertise, Michelle has been a frequent on-air contributor to the <span className="font-bold italic">WGN-TV Morning News</span> in Chicago, and serves on the Advisory Board of the <span className="font-bold italic">Rebecca's Dream Foundation</span>, a nonprofit dedicated to reducing stigma and increasing awareness of mental illness.
             </p>
           </div>
         </div>
@@ -141,7 +143,7 @@ export default function CoachingPage() {
               <p className="ml-5"> <span className="font-bold">AND</span></p>
               <li className="flex items-start space-x-3">
                 <span className="text-2xl mt-1">•</span>
-                <span><span className="font-bold">96%</span> of clients said they would <span className="font-bold italic">repeat the coaching experience</span></span>
+                <span><span className="font-bold">96%</span> of clients say they would <span className="font-bold italic">repeat the coaching experience</span></span>
               </li>
             </ul>
           </div>

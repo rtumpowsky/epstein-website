@@ -8,36 +8,35 @@ export default function TherapyPage() {
     "Couples Therapy",
     "Chronic Stress",
     "Emotional Trauma",
-    "Grief & Loss (Death, Divorce & Infertility)",
+    "Grief & Loss",
     "Low Self-Esteem",
-    "Marital Stress & Dissatisfaction",
+    "Marital Stress",
     "Parenting Dynamics",
     "Body Image Issues",
     "Major Life Transitions"
   ];
 
   return (
-    <div className="min-h-screen pt-24 pb-24 px-6 bg-[#8E5B68]">
+    <div className="min-h-screen pt-28 pb-24 px-6 bg-[#8E5B68]">
       <div className="max-w-full mx-auto px-4">
         {/* Page Title */}
         <div className="mb-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">CLINICAL THERAPY</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+            CLINICAL THERAPY
+          </h1>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
 
         {/* Main Content */}
         <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
-          <div className="grid md:grid-cols-[1fr_auto] gap-8 items-start">
-            {/* Text - all paragraphs */}
+          <div className="grid md:grid-cols-[1fr_auto] gap-8 items-start mb-6">
+            {/* Text - first 2 paragraphs */}
             <div className="space-y-6 text-2xl md:text-3xl text-gray-900 leading-relaxed">
               <p>
                 Dr. Michelle brings <span className="font-bold italic">more than 30 years of professional experience</span> to her work as a Licensed Clinical Psychologist and Board Certified Executive & Leadership Coach, allowing her to provide <span className="font-bold italic">highly individualized</span> care that is tailored to meet each client's unique needs.
               </p>
               <p>
-                As a <span className="font-bold italic">deeply attentive, curious and empathic</span> listener who offers <span className="font-bold italic">non-judgmental, supportive insights</span>, Dr. Michelle acts as a "mirror" to help clients see themselves with greater clarity and compassion.
-              </p>
-              <p>
-                Skillfully crafting each session to offer <span className="font-bold italic">something of value</span> - whether a meaningful insight, valuable strategy, or thoughtful psychoeducation – Dr. Michelle provides <span className="font-bold italic">highly individualized and solution-focused</span> support that is specifically tailored to productively meet each client's unique needs, with a focus on alleviating distress, promoting self-awareness, and empowering clients to make <span className="font-bold italic">lasting and measurable</span> improvements in their mental health, relationships, and overall well-being.
+                As a <span className="font-bold italic">deeply attentive, curious and empathic</span> listener, Dr. Michelle acts as a "mirror" offering <span className="font-bold italic">non-judgmental, supportive insights</span> to help clients see themselves with greater clarity and compassion.
               </p>
             </div>
 
@@ -45,14 +44,19 @@ export default function TherapyPage() {
             <img
               src="/headshot2.png"
               alt="Dr. Michelle A. Epstein"
-              className="w-full max-w-xl h-full rounded-lg shadow-xl"
+              className="w-full md:w-[300px] rounded-lg shadow-xl self-center"
             />
           </div>
+          
+          {/* Third paragraph - spans full width below */}
+          <p className="text-2xl md:text-3xl text-gray-900 leading-relaxed">
+            Skillfully crafting each session to offer <span className="font-bold italic">something of value</span> - whether a meaningful insight, valuable strategy, or thoughtful psychoeducation – Dr. Michelle provides <span className="font-bold italic">highly individualized and solution-focused</span> support that is specifically tailored to productively meet each client's unique needs, with a focus on alleviating distress, promoting self-awareness, and empowering clients to make <span className="font-bold italic">lasting and measurable</span> improvements in their mental health, relationships, and overall well-being.
+          </p>
         </div>
 
         {/* Education & Training - BLACK BOX with WHITE BOLD text */}
                 <div className="max-w-7xl mx-auto text-center mb-8">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-2 -ml-8" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             EDUCATION & TRAINING
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
@@ -97,7 +101,7 @@ export default function TherapyPage() {
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
         <div className="bg-black rounded-lg p-12 shadow-2xl mb-12">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 gap-x-16 max-w-6xl mx-auto md:ml-56">
             {subspecialties.map((specialty, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <span className="text-white uppercase text-2xl mt-1">•</span>
