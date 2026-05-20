@@ -27,7 +27,7 @@ export default function CoachingPage() {
             EXECUTIVE COACHING
           </h1>
           <div className="w-32 h-1 bg-white mx-auto"></div>
-        </div>
+      </div>
 
         {/* Main Content - WHITE BOX with intro paragraphs and image */}
         <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">

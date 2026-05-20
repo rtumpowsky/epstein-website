@@ -29,7 +29,7 @@ export default function TherapyPage() {
 
         {/* Main Content */}
         <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
-          <div className="grid md:grid-cols-[1fr_auto] gap-8 items-start mb-6">
+          <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center mb-6">
             {/* Text - first 2 paragraphs */}
             <div className="space-y-6 text-2xl md:text-3xl text-gray-900 leading-relaxed">
               <p>
@@ -44,7 +44,7 @@ export default function TherapyPage() {
             <img
               src="/headshot2.png"
               alt="Dr. Michelle A. Epstein"
-              className="w-full md:w-[300px] rounded-lg shadow-xl self-center"
+              className="w-full md:w-[400px] rounded-lg shadow-xl self-center"
             />
           </div>
           
