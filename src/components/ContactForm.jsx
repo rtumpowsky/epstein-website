@@ -16,7 +16,7 @@ export default function ContactForm({ context = 'therapy' }) {
     setStatus('submitting');
  // https://formspree.io/f/mojbewrb - Michelle formspree endpoint
     try {
-      const response = await fetch('https://formspree.io/f/xqejekjv', {
+      const response = await fetch('https://formspree.io/f/mojbewrb', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
