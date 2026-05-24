@@ -7,8 +7,8 @@ export default function HomePage({ setCurrentPage }) {
     <div className="min-h-screen bg-[#8E5B68]">
       {/* Top Navigation Bar - White with Links */}
       <div className="bg-white py-4 px-6">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-8">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center md:justify-between gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
             <button
               onClick={() => setCurrentPage('home')}
               className="text-lg font-semibold text-gray-900 hover:text-[#8E5B68] transition-colors"
@@ -61,15 +61,15 @@ export default function HomePage({ setCurrentPage }) {
       </div>
  
       {/* Control Your Narrative Section - BIGGER and ITALIC */}
-      <div className="py-12 px-6">
-        <div className="max-w-full mx-auto text-center px-4">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold italic text-white mb-12 whitespace-nowrap" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+      <div className="py-12 px-2">
+        <div className="max-w-full mx-auto text-center">
+          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-bold italic text-white mb-12" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             Control your narrative . . . or it will control you . . .
           </h2>
         </div>
  
         {/* Image and Bio Section */}
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 mb-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-4">
           {/* Image - Left Side */}
           <div className="flex items-start">
             <img
@@ -87,18 +87,17 @@ export default function HomePage({ setCurrentPage }) {
           </div>
         </div>
 
-        <h3 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold italic text-white mb-12 whitespace-nowrap" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+        <h3 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold italic text-white mb-12 px-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
                 "Language does not merely depict reality . . . it actively constructs it."
         </h3>
-        <br>
-        </br>
+        <br />
  
         {/* Language Quote Section - White Box with Cabernet Border - Cambria Font */}
-        <div className="max-w-7xl mx-auto mb-12">
-          <div className="bg-white border-4 border-[#8E5B68] p-10 rounded-lg shadow-2xl">
+        <div className="max-w-7xl mx-auto mb-12 px-4">
+          <div className="bg-white border-2 md:border-4 border-[#8E5B68] p-10 rounded-lg shadow-2xl">
             <div className="space-y-6 text-black leading-relaxed" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
               <p className="font-bold text-4xl md:text-5xl">
-                Words matter . . .
+                Words matter<span className="inline-block">&nbsp;.&nbsp;.&nbsp;.</span>
               </p>
               <p className="text-3xl md:text-4xl">
                 Self-limiting narratives drive self-defeating mindsets, and our internal dialogues subtly, but powerfully impact our beliefs about what is (im)possible.
@@ -121,7 +120,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* Service Buttons - White boxes with Blue/Cabernet Double Border */}
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 mb-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 px-4">
           <button
             onClick={() => setCurrentPage('therapy')}
             className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-12 hover:shadow-2xl transition-all duration-300"
@@ -149,7 +148,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* ENDORSEMENTS Title */}
-        <div className="max-w-7xl mx-auto text-center mb-8">
+        <div className="max-w-7xl mx-auto text-center mb-8 px-4">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             ENDORSEMENTS
           </h2>
@@ -157,7 +156,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* Endorsements Section - WIDER Black Vertical Boxes with BIGGER font */}
-        <div className="max-w-full mx-auto grid md:grid-cols-3 gap-8 mb-16 px-4">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 px-4">
           
           {/* Second Endorsement - Longest (in the middle) - UPDATED TEXT */}
           <div className="bg-black rounded-lg p-10 shadow-2xl flex items-center">
@@ -198,7 +197,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* WGN Video Section - WIDER */}
-        <div className="max-w-7xl mx-auto text-center mb-8">
+        <div className="max-w-7xl mx-auto text-center mb-8 px-4">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             WGN-TV NEWS FEATURES
           </h2>
@@ -206,7 +205,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
         <div className="max-w-full mx-auto mb-16 px-4">
           <div className="bg-white rounded-lg p-10 shadow-2xl">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               <a
                 href="https://wgntv.com/morning-news/psychologist-sheds-light-on-how-to-treat-anxiety/"
                 target="_blank"
@@ -216,11 +215,11 @@ export default function HomePage({ setCurrentPage }) {
                 <img 
                   src="/wgn1.png"
                   alt="How to Treat Anxiety"
-                  className="w-full h-80 rounded-lg object-cover hover:opacity-90 transition-opacity"
+                  className="w-full h-64 md:h-80 rounded-lg object-cover hover:opacity-90 transition-opacity"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-black bg-opacity-60 rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all group-hover:scale-110">
-                    <div className="text-5xl text-white ml-1">▶️</div>
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-black bg-opacity-60 rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all group-hover:scale-110">
+                    <div className="text-4xl md:text-5xl text-white ml-1">▶️</div>
                   </div>
                 </div>
               </a>
@@ -233,11 +232,11 @@ export default function HomePage({ setCurrentPage }) {
                 <img 
                   src="/wgn2.png"
                   alt="13 Reasons Why"
-                  className="w-full h-80 rounded-lg object-cover hover:opacity-90 transition-opacity"
+                  className="w-full h-64 md:h-80 rounded-lg object-cover hover:opacity-90 transition-opacity"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-black bg-opacity-60 rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all group-hover:scale-110">
-                    <div className="text-5xl text-white ml-1">▶️</div>
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-black bg-opacity-60 rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all group-hover:scale-110">
+                    <div className="text-4xl md:text-5xl text-white ml-1">▶️</div>
                   </div>
                 </div>
               </a>
@@ -250,11 +249,11 @@ export default function HomePage({ setCurrentPage }) {
                 <img 
                   src="/wgn3.png"
                   alt="Mental Health Discussion"
-                  className="w-full h-80 rounded-lg object-cover hover:opacity-90 transition-opacity"
+                  className="w-full h-64 md:h-80 rounded-lg object-cover hover:opacity-90 transition-opacity"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-black bg-opacity-60 rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all group-hover:scale-110">
-                    <div className="text-5xl text-white ml-1">▶️</div>
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-black bg-opacity-60 rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all group-hover:scale-110">
+                    <div className="text-4xl md:text-5xl text-white ml-1">▶️</div>
                   </div>
                 </div>
               </a>
@@ -263,7 +262,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* Certifications/Badges Section - WIDER with bigger badges and spaced schools */}
-        <div className="max-w-7xl mx-auto text-center mb-8">
+        <div className="max-w-7xl mx-auto text-center mb-8 px-4">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             CREDENTIALS
           </h2>
@@ -278,7 +277,7 @@ export default function HomePage({ setCurrentPage }) {
               <img src="/certs4.jpg" alt="Certification 4" className="h-56 w-auto object-contain" />
               <img src="/certs5.jpg" alt="Certification 5" className="h-56 w-auto object-contain" />
             </div>
-            <div className="flex justify-center items-center gap-32">
+            <div className="flex flex-wrap justify-center items-center gap-32">
               <img src="/Harvard.jpg" alt="Harvard" className="h-44 w-auto object-contain" />
               <img src="/UIUC.jpg" alt="UIUC" className="h-44 w-auto object-contain" />
               <img src="/UIC.png" alt="UIC" className="h-44 w-auto object-contain" />
@@ -287,19 +286,19 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* Contact Section - Updated with larger fonts and bold labels */}
-        <div className="max-w-7xl mx-auto text-center mb-8">
+        <div className="max-w-7xl mx-auto text-center mb-8 px-4">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             CONTACT
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto px-4">
           <div className="bg-white border-4 border-[#8E5B68] rounded-lg p-12 shadow-2xl">
             <h2 className="text-3xl md:text-4xl font-bold italic text-center text-gray-700 mb-8" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
               Reach out for a complimentary consultation
             </h2>
  
-            <div className="grid md:grid-cols-2 gap-8 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
               <a
                 href="mailto:drmichelleepstein@gmail.com"
                 className="flex items-center space-x-4 p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
@@ -307,7 +306,7 @@ export default function HomePage({ setCurrentPage }) {
                 <Mail size={36} className="text-[#8E5B68]" />
                 <div>
                   <p className="text-xl font-bold text-gray-700">Email</p>
-                  <p className="text-xl font-bold text-black">drmichelleepstein@gmail.com</p>
+                  <p className="text-xl font-bold text-black break-words">drmichelleepstein@gmail.com</p>
                 </div>
               </a>
               <a

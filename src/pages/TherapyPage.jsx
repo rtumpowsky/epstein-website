@@ -29,7 +29,7 @@ export default function TherapyPage() {
 
         {/* Main Content */}
         <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
-          <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-center mb-6">
             {/* Text - first 2 paragraphs */}
             <div className="space-y-6 text-3xl md:text-4xl text-gray-900 leading-relaxed">
               <p>
@@ -55,8 +55,8 @@ export default function TherapyPage() {
         </div>
 
         {/* Education & Training - BLACK BOX with WHITE BOLD text */}
-                <div className="max-w-7xl mx-auto text-center mb-8">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-2 -ml-8" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+        <div className="max-w-7xl mx-auto text-center mb-8">
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-2 ml-0 md:-ml-8" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             EDUCATION & TRAINING
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
@@ -80,7 +80,7 @@ export default function TherapyPage() {
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
         <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
-          <div className="space-y-6 text-1xl md:text-3xl text-gray-900 leading-relaxed">
+          <div className="space-y-6 text-2xl md:text-3xl text-gray-900 leading-relaxed">
             <p>
               Dr. Michelle works with college students, couples, and adult clients, and is credentialed with the Authority to Practice Interjurisdictional Telepsychology (APIT) via the Psychology Interjurisdictional Compact (PSYPACT). This enables her to provide telehealth services to clients in <span className="font-bold italic">43 participating states</span>, allowing for expanded access to care, and continuity of treatment for clients who relocate or travel for extended periods.
             </p>
@@ -101,19 +101,19 @@ export default function TherapyPage() {
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
         <div className="bg-black rounded-lg p-12 shadow-2xl mb-12">
-          <div className="grid md:grid-cols-2 gap-6 gap-x-16 max-w-6xl mx-auto md:ml-56">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 gap-x-16 max-w-6xl mx-auto ml-0 md:ml-56">
             {subspecialties.map((specialty, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <span className="text-white uppercase text-2xl mt-1">•</span>
-                <span className="text-white uppercase font-bold text-1xl md:text-3xl">{specialty}</span>
+                <span className="text-white uppercase font-bold text-2xl md:text-3xl">{specialty}</span>
               </div>
             ))}
           </div>
         </div>
 
         {/* "Together we can..." - Large WHITE ITALIC CAMBRIA on wine background */}
-        <div className="text-center my-16">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold italic text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+        <div className="text-center my-16 px-2">
+          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-bold italic text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             Together we can turn Insight into Action . . .<br/>and Action into Meaningful Impact
           </h2>
         </div>
@@ -131,7 +131,7 @@ export default function TherapyPage() {
               Reach out for a complimentary consultation
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
               <a
                 href="mailto:drmichelleepstein@gmail.com"
                 className="flex items-center space-x-4 p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
@@ -139,7 +139,7 @@ export default function TherapyPage() {
                 <Mail size={36} className="text-[#8E5B68]" />
                 <div>
                   <p className="text-xl font-bold text-gray-700">Email</p>
-                  <p className="text-xl font-bold text-black">drmichelleepstein@gmail.com</p>
+                  <p className="text-xl font-bold text-black break-words">drmichelleepstein@gmail.com</p>
                 </div>
               </a>
               <a
