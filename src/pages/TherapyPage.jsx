@@ -99,7 +99,7 @@ export default function TherapyPage() {
         <div className="bg-black rounded-lg p-12 shadow-2xl mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 gap-x-16 max-w-6xl mx-auto ml-0 md:ml-56">
             {subspecialties.map((specialty, index) => (
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="flex items-center">
                 <span className="text-white uppercase text-2xl mt-1">•</span>
                 <span className="text-white uppercase font-bold text-2xl md:text-3xl">{specialty}</span>
               </div>
