@@ -83,7 +83,7 @@ export default function CoachingPage() {
         <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start mb-6">
             {/* Text - first 3 paragraphs */}
-            <div className="space-y-6 text-xl md:text-2xl text-gray-900 leading-relaxed">
+            <div className="space-y-6 text-1xl md:text-3xl text-gray-900 leading-relaxed">
               <p>
                 <span className="font-bold italic">Leadership demands can create stress and distraction, leaving even the most talented and capable executives feeling overwhelmed . . .</span>
               </p>
@@ -104,7 +104,7 @@ export default function CoachingPage() {
           </div>
           
           {/* Fourth paragraph - spans full width below */}
-          <p className="text-xl md:text-2xl text-gray-900 leading-relaxed">
+          <p className="text-1xl md:text-3xl text-gray-900 leading-relaxed">
             She strives to offer <span className="font-bold italic">something of value</span> in every session, supporting professionals as they cut through their internal "noise" to build greater self-awareness, shift unproductive mindsets, and develop high-impact habits that allow them to manage time and stress more effectively, make sharper decisions, and lead with greater influence, impact and fulfillment. This approach allows her clients to not only enhance their professional performance, but also create <span className="font-bold italic">lasting and measurable</span> improvements in their physical health, emotional well-being, personal and professional relationships, and overall sense of purpose.
           </p>
         </div>
