@@ -37,15 +37,15 @@ export default function TherapyPage() {
           />
           
           {/* All text - wraps around the image on desktop */}
-          <div className="space-y-6 text-1xl md:text-3xl text-gray-900 leading-relaxed">
+          <div className="space-y-6 text-3xl md:text-4xl text-gray-900 leading-relaxed">
             <p>
               Dr. Michelle brings <span className="font-bold italic">more than 30 years of professional experience</span> to her work as a Licensed Clinical Psychologist and Board Certified Executive & Leadership Coach, allowing her to provide <span className="font-bold italic">highly individualized</span> care that is tailored to meet each client's unique needs.
             </p>
             <p>
-              As a <span className="font-bold italic">deeply attentive, curious and empathic</span> listener, Dr. Michelle acts as a "mirror" offering <span className="font-bold italic">non-judgmental, supportive insights</span> to help clients see themselves with greater clarity and compassion.
+              As <span className="font-bold italic">a deeply attentive, curious</span> and <span className="font-bold italic">empathic</span> listener, Dr. Michelle acts as a "mirror" offering <span className="font-bold italic">non-judgmental, supportive insights</span> to help clients see themselves with greater clarity and compassion.
             </p>
             <p>
-              Skillfully crafting each session to offer <span className="font-bold italic">something of value</span> - whether a meaningful insight, valuable strategy, or thoughtful psychoeducation – Dr. Michelle provides <span className="font-bold italic">highly individualized and solution-focused</span> support that is specifically tailored to productively meet each client's unique needs, with a focus on alleviating distress, promoting self-awareness, and empowering clients to make <span className="font-bold italic">lasting and measurable</span> improvements in their mental health, relationships, and overall well-being.
+              Skillfully crafting each session to offer <span className="font-bold italic">something of value</span> - whether a meaningful insight, valuable strategy, or thoughtful psychoeducation – Dr. Michelle provides <span className="font-bold italic">highly individualized</span> and <span className="font-bold italic">solution-focused</span> support that is specifically tailored to productively meet each client's unique needs, with a focus on alleviating distress, promoting self-awareness, and empowering clients to make <span className="font-bold italic">lasting</span> and <span className="font-bold italic">measurable</span> improvements in their mental health, relationships, and overall well-being.
             </p>
           </div>
         </div>

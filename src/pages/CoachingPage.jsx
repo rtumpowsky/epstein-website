@@ -91,7 +91,7 @@ export default function CoachingPage() {
                 As a Licensed Clinical Psychologist and Board Certified Executive & Leadership Coach, Michelle relies on <span className="font-bold italic">more than 30 years of professional experience</span>, and possesses the unique and invaluable ability to blend <span className="font-bold italic">astute psychological insight</span> with <span className="font-bold italic">proven leadership strategies</span>.
               </p>
               <p>
-                <span className="font-bold italic">A deeply attentive, curious and thoughtful</span> listener, who offers non-judgmental, supportive insights, Michelle acts as a "mirror" to help clients see themselves with deeper clarity. She then skillfully crafts each session to provide <span className="font-bold italic">highly individualized and solution-focused</span> coaching that is specifically tailored to productively meet each client's unique needs.
+                <span className="font-bold italic">A deeply attentive, curious</span> and <span className="font-bold italic">thoughtful</span> listener, who offers non-judgmental, supportive insights, Michelle acts as a "mirror" to help clients see themselves with deeper clarity. She then skillfully crafts each session to provide <span className="font-bold italic">highly individualized</span> and <span className="font-bold italic">solution-focused</span> coaching that is specifically tailored to productively meet each client's unique needs.
               </p>
             </div>
 
@@ -105,7 +105,7 @@ export default function CoachingPage() {
           
           {/* Fourth paragraph - spans full width below */}
           <p className="text-1xl md:text-3xl text-gray-900 leading-relaxed">
-            She strives to offer <span className="font-bold italic">something of value</span> in every session, supporting professionals as they cut through their internal "noise" to build greater self-awareness, shift unproductive mindsets, and develop high-impact habits that allow them to manage time and stress more effectively, make sharper decisions, and lead with greater influence, impact and fulfillment. This approach allows her clients to not only enhance their professional performance, but also create <span className="font-bold italic">lasting and measurable</span> improvements in their physical health, emotional well-being, personal and professional relationships, and overall sense of purpose.
+            She strives to offer <span className="font-bold italic">something of value</span> in every session, supporting professionals as they cut through their internal "noise" to build greater self-awareness, shift unproductive mindsets, and develop high-impact habits that allow them to manage time and stress more effectively, make sharper decisions, and lead with greater influence, impact and fulfillment. This approach allows her clients to not only enhance their professional performance, but also create <span className="font-bold italic">lasting</span> and <span className="font-bold italic">measurable</span> improvements in their physical health, emotional well-being, personal and professional relationships, and overall sense of purpose.
           </p>
         </div>
 
