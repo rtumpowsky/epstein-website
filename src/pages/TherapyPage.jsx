@@ -109,7 +109,7 @@ export default function TherapyPage() {
 
         {/* "Together we can..." - Large WHITE ITALIC CAMBRIA on wine background */}
         <div className="text-center my-16 px-2">
-          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-bold italic text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h2 className="text-3xl lg:text-5xl xl:text-6xl font-bold italic text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             Together we can turn Insight into Action . . .<br/>and Action into Meaningful Impact
           </h2>
         </div>
