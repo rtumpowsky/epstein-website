@@ -69,7 +69,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* Image and Bio Section */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-4">
           {/* Image - Left Side */}
           <div className="flex items-start">
             <img
@@ -81,7 +81,7 @@ export default function HomePage({ setCurrentPage }) {
  
           {/* Bio - Right Side - Black Box with White Text in Cambria - CORRECTED BOLDING */}
           <div className="bg-black p-10 rounded-lg shadow-2xl flex items-center">
-            <p className="text-white text-2xl md:text-3xl leading-relaxed" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+            <p className="text-white text-1xl md:text-2xl leading-relaxed" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
               As a Harvard-trained Clinical Psychologist and Executive/Leadership Coach with over 30 years of experience, Michelle possesses the unique and invaluable ability to blend <span className="font-bold italic">astute psychological insight</span> with <span className="font-bold italic">proven leadership strategies</span> to help her clients examine their personal narratives and cut through internal "noise" to build greater self-awareness, shift unproductive mindsets, and empower <span className="font-bold italic">lasting, measurable improvements</span> in mental health, relationships, productivity, impact, and overall well-being.
             </p>
           </div>
