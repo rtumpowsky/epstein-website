@@ -295,8 +295,8 @@ export default function HomePage({ setCurrentPage }) {
               >
                 <Mail size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-xl font-bold text-gray-700">Email</p>
-                  <p className="text-lg sm:text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Email</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
                 </div>
               </a>
               <a
@@ -305,8 +305,8 @@ export default function HomePage({ setCurrentPage }) {
               >
                 <Phone size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div>
-                  <p className="text-lg sm:text-xl font-bold text-gray-700">Voice or Text</p>
-                  <p className="text-lg sm:text-xl font-bold text-black">847-702-8777</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Voice or Text</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-black">847-702-8777</p>
                 </div>
               </a>
             </div>

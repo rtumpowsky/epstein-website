@@ -30,7 +30,7 @@ export default function CoachingPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-28 pb-24 px-6 bg-[#8E5B68]">
+    <div className="min-h-screen pt-28 pb-24 px-2 md:px-6 bg-[#8E5B68]">
       {/* ROI Modal Popup */}
       {showROIModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
@@ -79,7 +79,7 @@ export default function CoachingPage() {
         </div>
       )}
 
-      <div className="max-w-full mx-auto px-4">
+      <div className="max-w-full mx-auto px-1 md:px-4">
         {/* Page Title */}
         <div className="mb-12 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
@@ -89,7 +89,7 @@ export default function CoachingPage() {
       </div>
 
         {/* Main Content - WHITE BOX with intro paragraphs and image */}
-        <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
+        <div className="bg-white rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start mb-6">
             {/* Text - first 3 paragraphs */}
             <div className="space-y-6 text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 leading-relaxed">
@@ -125,7 +125,7 @@ export default function CoachingPage() {
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
-        <div className="bg-black rounded-lg p-12 shadow-2xl mb-12">
+        <div className="bg-black rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           <div className="space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white leading-relaxed">
             <p>
               Michelle holds a Doctorate (PhD) in Clinical Psychology from the <span className="font-bold italic">University of Illinois at Chicago</span>, as well as credentialing as a Board Certified Executive & Leadership Coach (BCC) from the <span className="font-bold italic">Center for Executive Coaching.</span>
@@ -146,7 +146,7 @@ export default function CoachingPage() {
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
-        <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
+        <div className="bg-white rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           <div className="space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-900 leading-relaxed">
             <p>
               Michelle uses <span className="font-bold italic">practical, evidence-based tools</span> to help clients identify and change faulty narratives and ingrained habits that hinder productivity and fulfillment. She teaches clients to "respond" rather than "react" in fast-paced, high-pressured work environments, helping them to hone their communication skills to be intentional and impactful, and teaching them to pivot in the face of problems, perceiving obstacles as opportunities.
@@ -164,7 +164,7 @@ export default function CoachingPage() {
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
-        <div className="bg-black rounded-lg p-12 shadow-2xl mb-12">
+        <div className="bg-black rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-48 max-w-6xl mx-auto">
             {subspecialties.map((specialty, index) => (
               <div key={index} className="flex items-center space-x-3">
@@ -182,7 +182,7 @@ export default function CoachingPage() {
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
-        <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
+        <div className="bg-white rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           <div className="space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-900 leading-relaxed">
             <p>
               A Metrix Global study found that Executive Coaching has a staggering <span className="font-bold italic">788% return on investment (ROI)</span>, as seen in enhanced work performance, improved collaboration, increases in revenue, and greater employee retention.
@@ -235,8 +235,8 @@ export default function CoachingPage() {
               >
                 <Mail size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-base sm:text-lg md:text-xl font-bold text-gray-700">Email</p>
-                  <p className="text-base sm:text-lg md:text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Email</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
                 </div>
               </a>
               <a
@@ -245,8 +245,8 @@ export default function CoachingPage() {
               >
                 <Phone size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div>
-                  <p className="text-base sm:text-lg md:text-xl font-bold text-gray-700">Voice or Text</p>
-                  <p className="text-base sm:text-lg md:text-xl font-bold text-black">847-702-8777</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Voice or Text</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-black">847-702-8777</p>
                 </div>
               </a>
             </div>

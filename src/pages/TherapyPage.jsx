@@ -17,8 +17,8 @@ export default function TherapyPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-28 pb-24 px-6 bg-[#8E5B68]">
-      <div className="max-w-full mx-auto px-4">
+    <div className="min-h-screen pt-28 pb-24 px-2 md:px-6 bg-[#8E5B68]">
+      <div className="max-w-full mx-auto px-1 md:px-4">
         {/* Page Title */}
         <div className="mb-12 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
@@ -28,7 +28,7 @@ export default function TherapyPage() {
         </div>
 
         {/* Main Content */}
-        <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
+        <div className="bg-white rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           {/* Image - Floated right so text wraps around it */}
           <img
             src="/headshot2.png"
@@ -57,7 +57,7 @@ export default function TherapyPage() {
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
-        <div className="bg-black rounded-lg p-12 shadow-2xl mb-12">
+        <div className="bg-black rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           <div className="space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white leading-relaxed">
             <p>
               Dr. Michelle was awarded a Doctorate (PhD) in Clinical Psychology from the <span className="font-bold italic">University of Illinois at Chicago</span>, and completed a <span className="italic">Pre-Doctoral Internship</span> at Boston Children's Hospital at <span className="font-bold italic">Harvard Medical School</span>, as well as a <span className="italic">Post-Doctoral Fellowship in Trauma</span> at <span className="font-bold italic">La Rabida Children's Hospital</span> in Chicago, where she was invited to join the staff of the Behavioral Health Department.
@@ -75,7 +75,7 @@ export default function TherapyPage() {
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
-        <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
+        <div className="bg-white rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           <div className="space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-900 leading-relaxed">
             <p>
               Dr. Michelle works with college students, couples, and adult clients, and is credentialed with the Authority to Practice Interjurisdictional Telepsychology (APIT) via the Psychology Interjurisdictional Compact (PSYPACT). This enables her to provide telehealth services to clients in <span className="font-bold italic">43 participating states</span>, allowing for expanded access to care, and continuity of treatment for clients who relocate or travel for extended periods.
@@ -96,7 +96,7 @@ export default function TherapyPage() {
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
-        <div className="bg-black rounded-lg p-12 shadow-2xl mb-12">
+        <div className="bg-black rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-48 max-w-6xl mx-auto">
             {subspecialties.map((specialty, index) => (
               <div key={index} className="flex items-center">
@@ -134,8 +134,8 @@ export default function TherapyPage() {
               >
                 <Mail size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-base sm:text-lg md:text-xl font-bold text-gray-700">Email</p>
-                  <p className="text-base sm:text-lg md:text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Email</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
                 </div>
               </a>
               <a
@@ -144,8 +144,8 @@ export default function TherapyPage() {
               >
                 <Phone size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div>
-                  <p className="text-base sm:text-lg md:text-xl font-bold text-gray-700">Voice or Text</p>
-                  <p className="text-base sm:text-lg md:text-xl font-bold text-black">847-702-8777</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Voice or Text</p>
+                  <p className="text-xs sm:text-base md:text-xl font-bold text-black">847-702-8777</p>
                 </div>
               </a>
             </div>
