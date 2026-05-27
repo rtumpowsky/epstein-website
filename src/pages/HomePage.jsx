@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Linkedin, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Mail, Phone, ChevronLeft, ChevronRight } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
  
 export default function HomePage({ setCurrentPage }) {
@@ -30,49 +30,8 @@ export default function HomePage({ setCurrentPage }) {
   
   return (
     <div className="min-h-screen bg-[#8E5B68]">
-      {/* Top Navigation Bar - White with Links */}
-      <div className="bg-white py-4 px-6">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center md:justify-between gap-4">
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-            <button
-              onClick={() => setCurrentPage('home')}
-              className="text-lg font-semibold text-gray-900 hover:text-[#8E5B68] transition-colors"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => setCurrentPage('therapy')}
-              className="text-lg font-semibold text-gray-900 hover:text-[#8E5B68] transition-colors"
-            >
-              Clinical
-            </button>
-            <button
-              onClick={() => setCurrentPage('coaching')}
-              className="text-lg font-semibold text-gray-900 hover:text-[#8E5B68] transition-colors"
-            >
-              Coaching
-            </button>
-            <a
-              href="mailto:drmichelleepstein@gmail.com"
-              className="text-lg font-semibold text-gray-900 hover:text-[#8E5B68] transition-colors"
-            >
-              Contact
-            </a>
-          </div>
-          <a
-            href="https://www.linkedin.com/in/dr-michelle-a-epstein-phd/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-gray-900 hover:text-[#8E5B68] transition-colors"
-          >
-            <Linkedin size={24} />
-            <span className="text-lg font-semibold">LinkedIn</span>
-          </a>
-        </div>
-      </div>
- 
       {/* Name Banner - Grey/White */}
-      <div className="bg-gray-100 py-8 px-6">
+      <div className="bg-gray-100 pt-24 pb-8 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4">
             Dr. MICHELLE A. EPSTEIN, PhD
@@ -94,7 +53,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* Image and Bio Section */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-2 md:px-4">
           {/* Image - Left Side */}
           <div className="flex items-start">
             <img
@@ -105,21 +64,21 @@ export default function HomePage({ setCurrentPage }) {
           </div>
  
           {/* Bio - Right Side - Black Box with White Text in Cambria - CORRECTED BOLDING */}
-          <div className="bg-black p-10 rounded-lg shadow-2xl flex items-center">
+          <div className="bg-black p-4 md:p-10 rounded-lg shadow-2xl flex items-center">
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
               As a Harvard-trained Clinical Psychologist and Executive/Leadership Coach with over 30 years of experience, Michelle possesses the unique and invaluable ability to blend <span className="font-bold italic">astute psychological insight</span> with <span className="font-bold italic">proven leadership strategies</span> to help her clients examine their personal narratives and cut through internal "noise" to build greater self-awareness, shift unproductive mindsets, and empower <span className="font-bold italic">lasting, measurable improvements</span> in mental health, relationships, productivity, impact, and overall well-being.
             </p>
           </div>
         </div>
 
-        <h3 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold italic text-white mb-12 px-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+        <h3 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold italic text-white mb-12 px-2 md:px-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
                 "Language does not merely depict reality . . . it actively constructs it."
         </h3>
         <br />
  
         {/* Language Quote Section - White Box with Cabernet Border - Cambria Font */}
-        <div className="max-w-7xl mx-auto mb-12 px-4">
-          <div className="bg-white border-2 md:border-4 border-[#8E5B68] p-10 rounded-lg shadow-2xl">
+        <div className="max-w-7xl mx-auto mb-12 px-2 md:px-4">
+          <div className="bg-white border-2 md:border-4 border-[#8E5B68] p-4 md:p-10 rounded-lg shadow-2xl">
             <div className="space-y-6 text-black leading-relaxed" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
               <p className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                 Words matter<span className="inline-block">&nbsp;.&nbsp;.&nbsp;.</span>
@@ -135,7 +94,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* CTA Text - WIDER and BIGGER Bold White Cambria Font */}
-        <div className="max-w-full mx-auto text-center mb-8 px-4">
+        <div className="max-w-full mx-auto text-center mb-8 px-2 md:px-4">
           <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             Let's start a productive conversation today!
           </p>
@@ -148,7 +107,7 @@ export default function HomePage({ setCurrentPage }) {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 px-4 items-stretch">
           <button
             onClick={() => setCurrentPage('therapy')}
-            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-12 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
+            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
           >
             <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-black mb-2">Click here for</p>
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
@@ -160,7 +119,7 @@ export default function HomePage({ setCurrentPage }) {
           </button>
           <button
             onClick={() => setCurrentPage('coaching')}
-            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-12 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
+            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
           >
             <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-black mb-2">Click here for</p>
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
@@ -173,7 +132,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* ENDORSEMENTS Title */}
-        <div className="max-w-7xl mx-auto text-center mb-8 px-4">
+        <div className="max-w-7xl mx-auto text-center mb-8 px-2 md:px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             ENDORSEMENTS
           </h2>
@@ -181,10 +140,10 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* Endorsements Section - Carousel */}
-        <div className="max-w-full mx-auto mb-16 px-4">
+        <div className="max-w-full mx-auto mb-16 px-2 md:px-4">
           <div className="relative max-w-5xl mx-auto">
             {/* Carousel Container */}
-            <div className="bg-black rounded-lg p-10 shadow-2xl min-h-[500px] flex items-center justify-center relative">
+            <div className="bg-black rounded-lg p-4 md:p-10 shadow-2xl min-h-[500px] flex items-center justify-center relative">
               <p 
                 className="text-white font-bold text-lg sm:text-xl md:text-2xl leading-relaxed text-center"
                 dangerouslySetInnerHTML={{ 
@@ -228,14 +187,14 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* WGN Video Section - WIDER */}
-        <div className="max-w-7xl mx-auto text-center mb-8 px-4">
+        <div className="max-w-7xl mx-auto text-center mb-8 px-2 md:px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             WGN-TV NEWS FEATURES
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
-        <div className="max-w-full mx-auto mb-16 px-4">
-          <div className="bg-white rounded-lg p-10 shadow-2xl">
+        <div className="max-w-full mx-auto mb-16 px-2 md:px-4">
+          <div className="bg-white rounded-lg p-4 md:p-10 shadow-2xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               <a
                 href="https://wgntv.com/morning-news/psychologist-sheds-light-on-how-to-treat-anxiety/"
@@ -293,14 +252,14 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* Certifications/Badges Section - WIDER with bigger badges and spaced schools */}
-        <div className="max-w-7xl mx-auto text-center mb-8 px-4">
+        <div className="max-w-7xl mx-auto text-center mb-8 px-2 md:px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             CREDENTIALS
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
-        <div className="max-w-full mx-auto mb-16 px-4">
-          <div className="bg-white rounded-lg p-10 shadow-2xl">
+        <div className="max-w-full mx-auto mb-16 px-2 md:px-4">
+          <div className="bg-white rounded-lg p-4 md:p-10 shadow-2xl">
             <div className="flex flex-wrap justify-center items-center gap-8 mb-10">
               <img src="/certs1.jpg" alt="Certification 1" className="h-52 w-auto object-contain" />
               <img src="/certs2.jpg" alt="Certification 2" className="h-56 w-auto object-contain" />
@@ -317,14 +276,14 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* Contact Section - Updated with larger fonts and bold labels */}
-        <div className="max-w-7xl mx-auto text-center mb-8 px-4">
+        <div className="max-w-7xl mx-auto text-center mb-8 px-2 md:px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             CONTACT
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="bg-white border-4 border-[#8E5B68] rounded-lg p-12 shadow-2xl">
+        <div className="max-w-5xl mx-auto px-2 md:px-4">
+          <div className="bg-white border-4 border-[#8E5B68] rounded-lg p-4 md:p-12 shadow-2xl">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold italic text-center text-gray-700 mb-8" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
               Reach out for a complimentary consultation
             </h2>
