@@ -1,8 +1,19 @@
-import React from 'react';
-import { Mail, Phone } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Mail, Phone, X } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 export default function TherapyPage() {
+  const [showMindsetModal, setShowMindsetModal] = useState(false);
+  
+  useEffect(() => {
+    // Check if Mindset popup has been shown this session
+    const hasSeenMindset = sessionStorage.getItem('hasSeenMindsetPopup');
+    if (!hasSeenMindset) {
+      setShowMindsetModal(true);
+      sessionStorage.setItem('hasSeenMindsetPopup', 'true');
+    }
+  }, []);
+
   const subspecialties = [
     "Anxiety & Depression",
     "Couples Therapy",
@@ -18,6 +29,39 @@ export default function TherapyPage() {
 
   return (
     <div className="min-h-screen pt-28 pb-24 px-2 md:px-6 bg-[#8E5B68]">
+      {/* Mindset Matters Modal Popup */}
+      {showMindsetModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+            {/* Close Button */}
+            <button
+              onClick={() => setShowMindsetModal(false)}
+              className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
+              aria-label="Close"
+            >
+              <X size={24} className="text-gray-700" />
+            </button>
+
+            {/* Mindset Content */}
+            <div className="p-8 md:p-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[#8E5B68] mb-6" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+                MINDSET MATTERS . . . AND IT'S ALL A MATTER OF MINDSIGHT
+              </h2>
+              <div className="w-32 h-1 bg-[#8E5B68] mx-auto mb-8"></div>
+              
+              <div className="space-y-6 text-lg md:text-xl lg:text-2xl text-gray-900 leading-relaxed">
+                <p>
+                  Collaborative talk therapies, such as Cognitive Behavioral Therapy (CBT), emphasize cognitive (mindset) restructuring, skill development, and behavioral change with demonstrated effectiveness in treating depression, anxiety, stress, and other emotional disorders. Average <span className="font-bold">symptom improvement</span> ranges from <span className="font-bold">50-80%</span> across conditions.
+                </p>
+                <p>
+                  Unlike medication, CBT <span className="font-bold italic">avoids</span> common pharmacological <span className="font-bold">side effects</span> AND has <span className="font-bold italic">strong long-term durability</span>, showing lasting benefits after therapy ends: CBT has low relapse rates (20-35%), as compared with medication discontinuation alone (60-80% relapse).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-full mx-auto px-1 md:px-4">
         {/* Page Title */}
         <div className="mb-12 text-center">
