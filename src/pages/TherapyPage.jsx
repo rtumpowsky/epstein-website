@@ -21,7 +21,7 @@ export default function TherapyPage() {
       <div className="max-w-full mx-auto px-4">
         {/* Page Title */}
         <div className="mb-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             CLINICAL THERAPY
           </h1>
           <div className="w-32 h-1 bg-white mx-auto"></div>
@@ -37,7 +37,7 @@ export default function TherapyPage() {
           />
           
           {/* All text - wraps around the image on desktop */}
-          <div className="space-y-6 text-3xl md:text-4xl text-gray-900 leading-relaxed">
+          <div className="space-y-6 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-900 leading-relaxed">
             <p>
               Dr. Michelle brings <span className="font-bold italic">more than 30 years of professional experience</span> to her work as a Licensed Clinical Psychologist and Board Certified Executive & Leadership Coach, allowing her to provide <span className="font-bold italic">highly individualized</span> care that is tailored to meet each client's unique needs.
             </p>
@@ -52,13 +52,13 @@ export default function TherapyPage() {
 
         {/* Education & Training - BLACK BOX with WHITE BOLD text */}
         <div className="max-w-7xl mx-auto text-center mb-8">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-2 ml-0 md:-ml-8" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 ml-0 md:-ml-8" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             EDUCATION & TRAINING
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
         <div className="bg-black rounded-lg p-12 shadow-2xl mb-12">
-          <div className="space-y-6 text-2xl md:text-3xl text-white leading-relaxed">
+          <div className="space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white leading-relaxed">
             <p>
               Dr. Michelle was awarded a Doctorate (PhD) in Clinical Psychology from the <span className="font-bold italic">University of Illinois at Chicago</span>, and completed a <span className="italic">Pre-Doctoral Internship</span> at Boston Children's Hospital at <span className="font-bold italic">Harvard Medical School</span>, as well as a <span className="italic">Post-Doctoral Fellowship in Trauma</span> at <span className="font-bold italic">La Rabida Children's Hospital</span> in Chicago, where she was invited to join the staff of the Behavioral Health Department.
             </p>
@@ -70,13 +70,13 @@ export default function TherapyPage() {
 
         {/* Services - WHITE BOX with BLACK text */}
         <div className="max-w-7xl mx-auto text-center mb-8">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             SERVICES
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
         <div className="bg-white rounded-lg p-12 shadow-2xl mb-12">
-          <div className="space-y-6 text-2xl md:text-3xl text-gray-900 leading-relaxed">
+          <div className="space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-900 leading-relaxed">
             <p>
               Dr. Michelle works with college students, couples, and adult clients, and is credentialed with the Authority to Practice Interjurisdictional Telepsychology (APIT) via the Psychology Interjurisdictional Compact (PSYPACT). This enables her to provide telehealth services to clients in <span className="font-bold italic">43 participating states</span>, allowing for expanded access to care, and continuity of treatment for clients who relocate or travel for extended periods.
             </p>
@@ -91,17 +91,17 @@ export default function TherapyPage() {
 
         {/* Subspecialties - BLACK BOX with BOLD WHITE text */}
         <div className="max-w-7xl mx-auto text-center mb-8 px-2">
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             SUBSPECIALTIES
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
         <div className="bg-black rounded-lg p-12 shadow-2xl mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 gap-x-16 max-w-6xl mx-auto ml-0 md:ml-56">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-48 max-w-6xl mx-auto">
             {subspecialties.map((specialty, index) => (
               <div key={index} className="flex items-center">
-                <span className="text-white uppercase text-2xl mt-1">•</span>
-                <span className="text-white uppercase font-bold text-2xl md:text-3xl">{specialty}</span>
+                <span className="text-white uppercase text-xl md:text-2xl mt-1">•</span>
+                <span className="text-white uppercase font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl ml-2">{specialty}</span>
               </div>
             ))}
           </div>
@@ -109,49 +109,49 @@ export default function TherapyPage() {
 
         {/* "Together we can..." - Large WHITE ITALIC CAMBRIA on wine background */}
         <div className="text-center my-16 px-2">
-          <h2 className="text-3xl lg:text-5xl xl:text-6xl font-bold italic text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold italic text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             Together we can turn Insight into Action . . .<br/>and Action into Meaningful Impact
           </h2>
         </div>
 
         {/* Contact Section - EXACT same as landing page */}
         <div className="max-w-7xl mx-auto text-center mb-8">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             CONTACT
           </h2>
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white border-4 border-[#8E5B68] rounded-lg p-12 shadow-2xl">
-            <p className="text-3xl md:text-4xl font-bold italic text-center text-gray-700 mb-8" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <div className="bg-white border-4 border-[#8E5B68] rounded-lg p-6 md:p-12 shadow-2xl">
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold italic text-center text-gray-700 mb-8" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
               Reach out for a complimentary consultation
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
               <a
                 href="mailto:drmichelleepstein@gmail.com"
-                className="flex items-center space-x-4 p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
+                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
               >
                 <Mail size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-xl font-bold text-gray-700">Email</p>
-                  <p className="text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
+                  <p className="text-base sm:text-lg md:text-xl font-bold text-gray-700">Email</p>
+                  <p className="text-base sm:text-lg md:text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
                 </div>
               </a>
               <a
                 href="tel:847-702-8777"
-                className="flex items-center space-x-4 p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
+                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
               >
-                <Phone size={36} className="text-[#8E5B68]" />
+                <Phone size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div>
-                  <p className="text-xl font-bold text-gray-700">Voice or Text</p>
-                  <p className="text-xl font-bold text-black">847-702-8777</p>
+                  <p className="text-base sm:text-lg md:text-xl font-bold text-gray-700">Voice or Text</p>
+                  <p className="text-base sm:text-lg md:text-xl font-bold text-black">847-702-8777</p>
                 </div>
               </a>
             </div>
 
-            <div className="bg-gray-50 rounded-lg p-8">
-              <h4 className="text-3xl font-bold mb-6 text-black text-center">Send a Message</h4>
+            <div className="bg-gray-50 rounded-lg p-6 md:p-8">
+              <h4 className="text-2xl md:text-3xl font-bold mb-6 text-black text-center">Send a Message</h4>
               <ContactForm context="therapy" />
             </div>
           </div>

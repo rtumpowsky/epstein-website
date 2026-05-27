@@ -15,11 +15,11 @@ export default function Navigation({ currentPage, setCurrentPage }) {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           <div className="cursor-pointer" onClick={() => setCurrentPage('home')}>
-            <h1 className="text-2xl font-bold text-gray-900">Dr. Michelle A. Epstein, PhD</h1>
-            <p className="text-sm text-gray-600">Licensed Clinical Psychologist</p>
+            <h1 className="text-base sm:text-lg md:text-2xl font-bold text-gray-900">Dr. Michelle A. Epstein, PhD</h1>
+            <p className="text-xs md:text-sm text-gray-600">Licensed Clinical Psychologist</p>
           </div>
 
           {/* Desktop Navigation */}

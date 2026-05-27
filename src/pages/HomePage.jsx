@@ -1,8 +1,33 @@
-import React from 'react';
-import { Mail, Phone, Linkedin } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, Linkedin, ChevronLeft, ChevronRight } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
  
 export default function HomePage({ setCurrentPage }) {
+  const [currentEndorsement, setCurrentEndorsement] = useState(0);
+  
+  const endorsements = [
+    {
+      text: "I found my work with Dr. Michelle Epstein to be incredibly productive and impactful. She offers thoughtful career guidance, practical tools, and highly valuable resources, while also creating space for deep listening, clarity, and meaningful reflection. Our sessions sharpened my thinking, helped me process information with greater ease, and enabled me to move forward with renewed confidence and purpose.",
+      attribution: "— Vice President, Corporate Philanthropy<br/>Fortune 500 Company"
+    },
+    {
+      text: "As a Divisional President of a large organization, I am constantly confronting the pressures and complexities of executive leadership. Few people understand what that level of responsibility demands... but Michelle does.<br/><br/>As a Doctor of Psychology, she brings a rare depth to executive coaching. With an understanding of the science behind stress, emotion, and performance, she offers practical, strategic guidance for leaders operating in high-stakes environments.<br/><br/>During some of the most challenging periods of my leadership journey, she helped me gain clarity, regulate pressure, and navigate corporate dynamics with confidence and composure.<br/><br/>For any executive who wants to lead more powerfully and sustainably, I recommend her without hesitation.",
+      attribution: "— Division President & Former CEO<br/>Higher Education & E-Learning"
+    },
+    {
+      text: "Working with Michelle empowered me during a time of complex career and life decisions. Her sharp insight, deep empathy, and skill in asking precisely the right questions created a rare combination of thoughtful perspective and practical guidance.<br/><br/>Michelle helped me pause and step back, allowing me to think with greater intention and clarity. She supported me in making deliberate, courageous choices that truly aligned with my values and long-term goals. Her ability to listen deeply and \"cut through the noise\" enabled me to focus on what truly mattered, both professionally and personally.<br/><br/>I left every conversation with increased confidence and conviction in my decisions. I highly recommend Michelle as an invaluable coach for any executive navigating complexity, transitions, or critical inflection points.",
+      attribution: "— Associate Director, Client HR Operations<br/>Fortune Global 500 Company"
+    }
+  ];
+  
+  const nextEndorsement = () => {
+    setCurrentEndorsement((prev) => (prev + 1) % endorsements.length);
+  };
+  
+  const prevEndorsement = () => {
+    setCurrentEndorsement((prev) => (prev - 1 + endorsements.length) % endorsements.length);
+  };
+  
   return (
     <div className="min-h-screen bg-[#8E5B68]">
       {/* Top Navigation Bar - White with Links */}
@@ -63,13 +88,13 @@ export default function HomePage({ setCurrentPage }) {
       {/* Control Your Narrative Section - BIGGER and ITALIC */}
       <div className="py-12 px-2">
         <div className="max-w-full mx-auto text-center">
-          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-bold italic text-white mb-12" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold italic text-white mb-12" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             Control your narrative . . . or it will control you . . .
           </h2>
         </div>
  
         {/* Image and Bio Section */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-4">
           {/* Image - Left Side */}
           <div className="flex items-start">
             <img
@@ -81,13 +106,13 @@ export default function HomePage({ setCurrentPage }) {
  
           {/* Bio - Right Side - Black Box with White Text in Cambria - CORRECTED BOLDING */}
           <div className="bg-black p-10 rounded-lg shadow-2xl flex items-center">
-            <p className="text-white text-lg sm:text-xl md:text-1xl lg:text-2xl leading-relaxed" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+            <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
               As a Harvard-trained Clinical Psychologist and Executive/Leadership Coach with over 30 years of experience, Michelle possesses the unique and invaluable ability to blend <span className="font-bold italic">astute psychological insight</span> with <span className="font-bold italic">proven leadership strategies</span> to help her clients examine their personal narratives and cut through internal "noise" to build greater self-awareness, shift unproductive mindsets, and empower <span className="font-bold italic">lasting, measurable improvements</span> in mental health, relationships, productivity, impact, and overall well-being.
             </p>
           </div>
         </div>
 
-        <h3 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold italic text-white mb-12 px-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+        <h3 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold italic text-white mb-12 px-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
                 "Language does not merely depict reality . . . it actively constructs it."
         </h3>
         <br />
@@ -120,10 +145,10 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* Service Buttons - White boxes with Blue/Cabernet Double Border */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 px-4 items-stretch">
           <button
             onClick={() => setCurrentPage('therapy')}
-            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-12 hover:shadow-2xl transition-all duration-300"
+            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-12 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
           >
             <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-black mb-2">Click here for</p>
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
@@ -135,7 +160,7 @@ export default function HomePage({ setCurrentPage }) {
           </button>
           <button
             onClick={() => setCurrentPage('coaching')}
-            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-12 hover:shadow-2xl transition-all duration-300"
+            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-12 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
           >
             <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-black mb-2">Click here for</p>
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
@@ -155,44 +180,50 @@ export default function HomePage({ setCurrentPage }) {
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
  
-        {/* Endorsements Section - WIDER Black Vertical Boxes with BIGGER font */}
-        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 px-4">
-          
-          {/* Second Endorsement - Longest (in the middle) - UPDATED TEXT */}
-          <div className="bg-black rounded-lg p-10 shadow-2xl flex items-center">
-            <p className="text-white font-bold text-lg sm:text-xl md:text-2xl leading-relaxed text-center">
-              "As a Divisional President of a large organization, I am constantly confronting the pressures and complexities of executive leadership. Few people understand what that level of responsibility demands... but Michelle does.
-              <br/><br/>
-              As a Doctor of Psychology, she brings a rare depth to executive coaching. With an understanding of the science behind stress, emotion, and performance, she offers practical, strategic guidance for leaders operating in high-stakes environments.
-              <br/><br/>
-              During some of the most challenging periods of my leadership journey, she helped me gain clarity, regulate pressure, and navigate corporate dynamics with confidence and composure.
-              <br/><br/>
-              For any executive who wants to lead more powerfully and sustainably, I recommend her without hesitation."
-              <br/><br/>
-              <span className="text-base sm:text-lg">— Division President & Former CEO<br/>Higher Education & E-Learning</span>
-            </p>
-          </div>
-
-          {/* First Endorsement - Shorter */}
-          <div className="bg-black rounded-lg p-10 shadow-2xl flex items-center">
-            <p className="text-white font-bold text-lg sm:text-xl md:text-2xl leading-relaxed text-center">
-              "I found my work with Dr. Michelle Epstein to be incredibly productive and impactful. She offers thoughtful career guidance, practical tools, and highly valuable resources, while also creating space for deep listening, clarity, and meaningful reflection. Our sessions sharpened my thinking, helped me process information with greater ease, and enabled me to move forward with renewed confidence and purpose."
-              <br/><br/>
-              <span className="text-base sm:text-lg">— Vice President, Corporate Philanthropy<br/>Fortune 500 Company</span>
-            </p>
-          </div>
- 
-          {/* Third Endorsement - Shortest */}
-          <div className="bg-black rounded-lg p-10 shadow-2xl flex items-center">
-            <p className="text-white font-bold text-lg sm:text-xl md:text-2xl leading-relaxed text-center">
-              "Working with Michelle empowered me during a time of complex career and life decisions. Her sharp insight, deep empathy, and skill in asking precisely the right questions created a rare combination of thoughtful perspective and practical guidance.
-              <br/><br/>
-              Michelle helped me pause and step back, allowing me to think with greater intention and clarity. She supported me in making deliberate, courageous choices that truly aligned with my values and long-term goals. Her ability to listen deeply and "cut through the noise" enabled me to focus on what truly mattered, both professionally and personally.
-              <br/><br/>
-              I left every conversation with increased confidence and conviction in my decisions. I highly recommend Michelle as an invaluable coach for any executive navigating complexity, transitions, or critical inflection points."
-              <br/><br/>
-              <span className="text-base sm:text-lg">— Associate Director, Client HR Operations<br/>Fortune Global 500 Company</span>
-            </p>
+        {/* Endorsements Section - Carousel */}
+        <div className="max-w-full mx-auto mb-16 px-4">
+          <div className="relative max-w-5xl mx-auto">
+            {/* Carousel Container */}
+            <div className="bg-black rounded-lg p-10 shadow-2xl min-h-[500px] flex items-center justify-center relative">
+              <p 
+                className="text-white font-bold text-lg sm:text-xl md:text-2xl leading-relaxed text-center"
+                dangerouslySetInnerHTML={{ 
+                  __html: `"${endorsements[currentEndorsement].text}"<br/><br/><span class="text-base sm:text-lg">${endorsements[currentEndorsement].attribution}</span>` 
+                }}
+              />
+              
+              {/* Previous Button */}
+              <button
+                onClick={prevEndorsement}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all"
+                aria-label="Previous endorsement"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              
+              {/* Next Button */}
+              <button
+                onClick={nextEndorsement}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all"
+                aria-label="Next endorsement"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+            
+            {/* Dots Indicator */}
+            <div className="flex justify-center gap-3 mt-6">
+              {endorsements.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentEndorsement(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    index === currentEndorsement ? 'bg-white w-8' : 'bg-white bg-opacity-50'
+                  }`}
+                  aria-label={`Go to endorsement ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
  
