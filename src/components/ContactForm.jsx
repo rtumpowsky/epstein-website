@@ -19,6 +19,7 @@ export default function ContactForm({ context = 'therapy' }) {
       const response = await fetch('https://formspree.io/f/mojbewrb', {
         method: 'POST',
         headers: {
+          'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
@@ -27,7 +28,7 @@ export default function ContactForm({ context = 'therapy' }) {
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
-          context: context === 'therapy' ? 'Clinical Therapy Inquiry' : context === 'coaching' ? 'Executive Coaching Inquiry' : 'General Inquiry'
+          _subject: context === 'therapy' ? 'Clinical Therapy Inquiry' : context === 'coaching' ? 'Executive Coaching Inquiry' : 'General Inquiry'
         })
       });
  

@@ -90,7 +90,7 @@ export default function CoachingPage() {
 
         {/* Main Content - WHITE BOX with intro paragraphs and image */}
         <div className="bg-white rounded-lg p-4 md:p-12 shadow-2xl mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-start mb-6">
             {/* Text - first 3 paragraphs */}
             <div className="space-y-6 text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 leading-relaxed">
               <p>
@@ -108,7 +108,7 @@ export default function CoachingPage() {
             <img
               src="/headshot3.jpg"
               alt="Dr. Michelle A. Epstein"
-              className="w-full max-w-sm rounded-lg shadow-xl self-center"
+              className="w-full max-w-md mx-auto lg:max-w-sm rounded-lg shadow-xl self-center"
             />
           </div>
           

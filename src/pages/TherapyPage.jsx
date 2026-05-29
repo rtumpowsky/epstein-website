@@ -45,13 +45,13 @@ export default function TherapyPage() {
             {/* Mindset Content */}
             <div className="p-8 md:p-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[#8E5B68] mb-6" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
-                MINDSET MATTERS . . . AND IT'S ALL A MATTER OF MINDSIGHT
+                OUTCOMES
               </h2>
               <div className="w-32 h-1 bg-[#8E5B68] mx-auto mb-8"></div>
               
-              <div className="space-y-6 text-lg md:text-xl lg:text-2xl text-gray-900 leading-relaxed">
+              <div className="space-y-6 text-2xl md:text-3xl text-gray-900 leading-relaxed">
                 <p>
-                  Collaborative talk therapies, such as Cognitive Behavioral Therapy (CBT), emphasize cognitive (mindset) restructuring, skill development, and behavioral change with demonstrated effectiveness in treating depression, anxiety, stress, and other emotional disorders. Average <span className="font-bold">symptom improvement</span> ranges from <span className="font-bold">50-80%</span> across conditions.
+                  Collaborative talk therapies, such as <span className="font-bold italic">Cognitive Behavioral Therapy (CBT)</span>, emphasize cognitive (mindset) restructuring, skill development, and behavioral change with <span className="font-bold italic">demonstrated effectiveness</span> in treating depression, anxiety, stress, and other emotional disorders. <span className="font-bold">Average symptom improvement</span> ranges from <span className="font-bold">50-80%</span> across conditions.
                 </p>
                 <p>
                   Unlike medication, CBT <span className="font-bold italic">avoids</span> common pharmacological <span className="font-bold">side effects</span> AND has <span className="font-bold italic">strong long-term durability</span>, showing lasting benefits after therapy ends: CBT has low relapse rates (20-35%), as compared with medication discontinuation alone (60-80% relapse).
@@ -81,7 +81,10 @@ export default function TherapyPage() {
           />
           
           {/* All text - wraps around the image on desktop */}
-          <div className="space-y-6 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-900 leading-relaxed">
+          <div className="space-y-6 text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 leading-relaxed">
+            <p>
+              <span className="font-bold italic">Mindset matters...and it's all a matter of mindset...</span>
+            </p>
             <p>
               Dr. Michelle brings <span className="font-bold italic">more than 30 years of professional experience</span> to her work as a Licensed Clinical Psychologist and Board Certified Executive & Leadership Coach, allowing her to provide <span className="font-bold italic">highly individualized</span> care that is tailored to meet each client's unique needs.
             </p>
@@ -148,6 +151,24 @@ export default function TherapyPage() {
                 <span className="text-white uppercase font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl ml-2">{specialty}</span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Outcomes - WHITE BOX with BLACK text */}
+        <div className="max-w-7xl mx-auto text-center mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+            OUTCOMES
+          </h2>
+          <div className="w-32 h-1 bg-white mx-auto"></div>
+        </div>
+        <div className="bg-white rounded-lg p-4 md:p-12 shadow-2xl mb-12">
+          <div className="space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-900 leading-relaxed">
+            <p>
+                  Collaborative talk therapies, such as <span className="font-bold italic">Cognitive Behavioral Therapy (CBT)</span>, emphasize cognitive (mindset) restructuring, skill development, and behavioral change with <span className="font-bold italic">demonstrated effectiveness</span> in treating depression, anxiety, stress, and other emotional disorders. <span className="font-bold">Average symptom improvement</span> ranges from <span className="font-bold">50-80%</span> across conditions.
+                </p>
+                <p>
+                  Unlike medication, CBT <span className="font-bold italic">avoids</span> common pharmacological <span className="font-bold">side effects</span> AND has <span className="font-bold italic">strong long-term durability</span>, showing lasting benefits after therapy ends: CBT has low relapse rates (20-35%), as compared with medication discontinuation alone (60-80% relapse).
+                </p>
           </div>
         </div>
 

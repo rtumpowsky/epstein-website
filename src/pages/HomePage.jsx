@@ -66,7 +66,7 @@ export default function HomePage({ setCurrentPage }) {
           {/* Bio - Right Side - Black Box with White Text in Cambria - CORRECTED BOLDING */}
           <div className="bg-black p-4 md:p-10 rounded-lg shadow-2xl flex items-center">
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
-              As a Harvard-trained Clinical Psychologist and Executive/Leadership Coach with over 30 years of experience, Michelle possesses the unique and invaluable ability to blend <span className="font-bold italic">astute psychological insight</span> with <span className="font-bold italic">proven leadership strategies</span> to help her clients examine their personal narratives and cut through internal "noise" to build greater self-awareness, shift unproductive mindsets, and empower <span className="font-bold italic">lasting, measurable improvements</span> in mental health, relationships, productivity, impact, and overall well-being.
+              As a Harvard-trained Clinical Psychologist and Executive/Leadership Coach with over 30 years of experience, Michelle possesses the unique and invaluable ability to blend <span className="font-bold italic">astute psychological insight</span> with <span className="font-bold italic">proven leadership strategies.</span> This approach allows her clients to examine their personal narratives and cut through internal "noise" to build greater self-awareness, shift unproductive mindsets, and empower <span className="font-bold italic">lasting, measurable improvements</span> in mental health, relationships, productivity, impact, and overall well-being.
             </p>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function HomePage({ setCurrentPage }) {
                 Words matter<span className="inline-block">&nbsp;.&nbsp;.&nbsp;.</span>
               </p>
               <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-                Self-limiting narratives drive self-defeating mindsets, and our internal dialogues subtly, but powerfully impact our beliefs about what is (im)possible.
+                Self-limiting narratives drive self-defeating mindsets, and our internal dialogues subtly, but powerfully, impact our beliefs about what is (im)possible.
               </p>
               <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
                 Using language intentionally changes the story, and empowers us to reshape our perceptions, reclaim control, and make clearer, more confident decisions.
