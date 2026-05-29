@@ -14,6 +14,17 @@ export default function TherapyPage() {
     }
   }, []);
 
+  // Close modal with Escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && showMindsetModal) {
+        setShowMindsetModal(false);
+      }
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [showMindsetModal]);
+
   const subspecialties = [
     "Anxiety & Depression",
     "Couples Therapy",
@@ -31,23 +42,32 @@ export default function TherapyPage() {
     <div className="min-h-screen pt-28 pb-24 px-2 md:px-6 bg-[#8E5B68]">
       {/* Mindset Matters Modal Popup */}
       {showMindsetModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="mindset-modal-title"
+          onClick={() => setShowMindsetModal(false)}
+        >
+          <div 
+            className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
+            onClick={(e) => e.stopPropagation()}
+          >
             {/* Close Button */}
             <button
               onClick={() => setShowMindsetModal(false)}
-              className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
-              aria-label="Close"
+              className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68]"
+              aria-label="Close outcomes information"
             >
-              <X size={24} className="text-gray-700" />
+              <X size={24} className="text-gray-700" aria-hidden="true" />
             </button>
 
             {/* Mindset Content */}
             <div className="p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[#8E5B68] mb-6" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+              <h2 id="mindset-modal-title" className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[#8E5B68] mb-6" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
                 OUTCOMES
               </h2>
-              <div className="w-32 h-1 bg-[#8E5B68] mx-auto mb-8"></div>
+              <div className="w-32 h-1 bg-[#8E5B68] mx-auto mb-8" aria-hidden="true"></div>
               
               <div className="space-y-6 text-2xl md:text-3xl text-gray-900 leading-relaxed">
                 <p>
@@ -195,9 +215,10 @@ export default function TherapyPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
               <a
                 href="mailto:drmichelleepstein@gmail.com"
-                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
+                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:ring-offset-2"
+                aria-label="Send email to Dr. Michelle Epstein"
               >
-                <Mail size={36} className="text-[#8E5B68] flex-shrink-0" />
+                <Mail size={36} className="text-[#8E5B68] flex-shrink-0" aria-hidden="true" />
                 <div className="min-w-0">
                   <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Email</p>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
@@ -205,9 +226,10 @@ export default function TherapyPage() {
               </a>
               <a
                 href="tel:847-702-8777"
-                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
+                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:ring-offset-2"
+                aria-label="Call or text Dr. Michelle Epstein at 847-702-8777"
               >
-                <Phone size={36} className="text-[#8E5B68] flex-shrink-0" />
+                <Phone size={36} className="text-[#8E5B68] flex-shrink-0" aria-hidden="true" />
                 <div>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Voice or Text</p>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-black">847-702-8777</p>

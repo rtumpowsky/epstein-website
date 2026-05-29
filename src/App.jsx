@@ -45,11 +45,21 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Skip Navigation Link - hidden until focused */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-gray-900 focus:text-white focus:px-4 focus:py-2 focus:rounded"
+      >
+        Skip to main content
+      </a>
+      
       <Navigation currentPage={currentPage} setCurrentPage={navigateTo} />
       
-      {currentPage === 'home' && <HomePage setCurrentPage={navigateTo} />}
-      {currentPage === 'therapy' && <TherapyPage />}
-      {currentPage === 'coaching' && <CoachingPage />}
+      <main id="main-content">
+        {currentPage === 'home' && <HomePage setCurrentPage={navigateTo} />}
+        {currentPage === 'therapy' && <TherapyPage />}
+        {currentPage === 'coaching' && <CoachingPage />}
+      </main>
       
       <Footer />
     </div>
