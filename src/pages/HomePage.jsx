@@ -7,7 +7,7 @@ export default function HomePage({ setCurrentPage }) {
   
   const endorsements = [
     {
-      text: "I found my work with Dr. Michelle Epstein to be incredibly productive and impactful. She offers thoughtful career guidance, practical tools, and highly valuable resources, while also creating space for deep listening, clarity, and meaningful reflection. Our sessions sharpened my thinking, helped me process information with greater ease, and enabled me to move forward with renewed confidence and purpose.",
+      text: "I found my work with Dr. Michelle Epstein to be incredibly productive and impactful. She offers thoughtful career guidance, practical tools, and highly valuable resources, while also creating space for deep listening, clarity, and meaningful reflection.<br></br> Our sessions sharpened my thinking, helped me process information with greater ease, and enabled me to move forward with renewed confidence and purpose.",
       attribution: "— Vice President, Corporate Philanthropy<br/>Fortune 500 Company"
     },
     {
