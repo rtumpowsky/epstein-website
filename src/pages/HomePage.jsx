@@ -144,7 +144,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
  
         {/* Endorsements Section - Carousel with 3 visible slides */}
-        <div className="max-w-full mx-auto mb-16 px-2 md:px-4">
+        <div className="max-w-full mx-auto mb-16 px-2 md:px-4 pt-12 sm:pt-16 md:pt-8 lg:pt-4 pb-12 sm:pb-16 md:pb-8 lg:pb-4 overflow-x-hidden">
           <div className="relative max-w-7xl mx-auto">
             {/* Carousel Container with 3 slides visible */}
             <div className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
