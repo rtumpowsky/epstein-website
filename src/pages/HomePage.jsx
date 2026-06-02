@@ -147,7 +147,7 @@ export default function HomePage({ setCurrentPage }) {
         <div className="max-w-full mx-auto mb-16 px-2 md:px-4">
           <div className="relative max-w-7xl mx-auto">
             {/* Carousel Container with 3 slides visible */}
-            <div className="relative h-[900px] md:h-[800px] flex items-center justify-center">
+            <div className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
               {endorsements.map((endorsement, index) => {
                 const offset = index - currentEndorsement;
                 const isActive = index === currentEndorsement;
@@ -169,11 +169,11 @@ export default function HomePage({ setCurrentPage }) {
                       width: '55%',
                     }}
                   >
-                    <div className="bg-black rounded-lg p-4 md:p-10 shadow-2xl h-[900px] md:h-[800px] flex items-center justify-center">
+                    <div className="bg-black rounded-lg p-4 md:p-8 lg:p-10 shadow-2xl min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
                       <p 
-                        className="text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-center"
+                        className="text-white font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed text-center"
                         dangerouslySetInnerHTML={{ 
-                          __html: `"${endorsement.text}"<br/><br/><span class="text-sm sm:text-base lg:text-lg">${endorsement.attribution}</span>` 
+                          __html: `"${endorsement.text}"<br/><br/><span class="text-xs sm:text-sm lg:text-base">${endorsement.attribution}</span>` 
                         }}
                       />
                     </div>
@@ -244,14 +244,14 @@ export default function HomePage({ setCurrentPage }) {
                 </div>
               </a>
               <a
-                href="https://wgntv.com/morning-news/michelle-epstein-shares-tips-on-coping-with-covid-19-stress-and-anxiety/"
+                href="https://wgntv.com/morning-news/what-parents-need-to-know-about-the-new-season-of-13-reasons/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block relative"
               >
                 <img 
-                  src="/WGN2_NEW.png"
-                  alt="Coping with COVID-19 Stress and Anxiety"
+                  src="/wgn2.png"
+                  alt="13 Reasons Why"
                   className="w-full h-64 md:h-80 rounded-lg object-cover hover:opacity-90 transition-opacity"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
