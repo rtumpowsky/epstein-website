@@ -201,7 +201,7 @@ export default function HomePage({ setCurrentPage }) {
             </div>
             
             {/* Dots Indicator */}
-            <div className="flex justify-center gap-3 mt-6">
+            <div className="flex justify-center gap-3 mt-16 sm:mt-12 md:mt-8 lg:mt-6">
               {endorsements.map((_, index) => (
                 <button
                   key={index}
