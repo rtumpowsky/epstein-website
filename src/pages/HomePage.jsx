@@ -107,27 +107,31 @@ export default function HomePage({ setCurrentPage }) {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 px-4 items-stretch">
           <button
             onClick={() => setCurrentPage('therapy')}
-            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
+            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col"
           >
-            <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-black mb-2">Click here for</p>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
-              CLINICAL<br/>THERAPY
-            </h3>
-            <p className="text-lg sm:text-xl md:text-2xl font-bold italic text-gray-700">
-              Compassionate, evidence-based therapy
-            </p>
+            <div className="flex-1 flex flex-col">
+              <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-black mb-2">Click here for</p>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6 flex-1">
+                CLINICAL<br/>THERAPY
+              </h3>
+              <p className="text-lg sm:text-xl md:text-2xl font-bold italic text-gray-700 min-h-[3.5rem] sm:min-h-[4rem] md:min-h-[4.5rem] flex items-start justify-center text-center">
+                Compassionate, evidence-based therapy
+              </p>
+            </div>
           </button>
           <button
             onClick={() => setCurrentPage('coaching')}
-            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
+            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col"
           >
-            <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-black mb-2">Click here for</p>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
-              EXECUTIVE<br/>COACHING
-            </h3>
-            <p className="text-lg sm:text-xl md:text-2xl font-bold italic text-gray-700">
-              Strategic guidance for leaders
-            </p>
+            <div className="flex-1 flex flex-col">
+              <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-black mb-2">Click here for</p>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6 flex-1">
+                EXECUTIVE<br/>COACHING
+              </h3>
+              <p className="text-lg sm:text-xl md:text-2xl font-bold italic text-gray-700 min-h-[3.5rem] sm:min-h-[4rem] md:min-h-[4.5rem] flex items-start justify-center text-center">
+                Strategic guidance for leaders
+              </p>
+            </div>
           </button>
         </div>
  
@@ -139,34 +143,60 @@ export default function HomePage({ setCurrentPage }) {
           <div className="w-32 h-1 bg-white mx-auto"></div>
         </div>
  
-        {/* Endorsements Section - Carousel */}
+        {/* Endorsements Section - Carousel with 3 visible slides */}
         <div className="max-w-full mx-auto mb-16 px-2 md:px-4">
-          <div className="relative max-w-5xl mx-auto">
-            {/* Carousel Container */}
-            <div className="bg-black rounded-lg p-4 md:p-10 shadow-2xl min-h-[500px] flex items-center justify-center relative">
-              <p 
-                className="text-white font-bold text-lg sm:text-xl md:text-2xl leading-relaxed text-center"
-                dangerouslySetInnerHTML={{ 
-                  __html: `"${endorsements[currentEndorsement].text}"<br/><br/><span class="text-base sm:text-lg">${endorsements[currentEndorsement].attribution}</span>` 
-                }}
-              />
+          <div className="relative max-w-7xl mx-auto">
+            {/* Carousel Container with 3 slides visible */}
+            <div className="relative h-[900px] md:h-[800px] flex items-center justify-center">
+              {endorsements.map((endorsement, index) => {
+                const offset = index - currentEndorsement;
+                const isActive = index === currentEndorsement;
+                const isAdjacent = Math.abs(offset) === 1 || Math.abs(offset) === endorsements.length - 1;
+                
+                // Calculate actual offset for circular display
+                let displayOffset = offset;
+                if (offset > endorsements.length / 2) displayOffset = offset - endorsements.length;
+                if (offset < -endorsements.length / 2) displayOffset = offset + endorsements.length;
+                
+                return (
+                  <div
+                    key={index}
+                    className="absolute transition-all duration-500 ease-in-out"
+                    style={{
+                      transform: `translateX(${displayOffset * 75}%) scale(${isActive ? 1 : 0.85})`,
+                      opacity: isActive ? 1 : isAdjacent ? 0.4 : 0,
+                      zIndex: isActive ? 10 : 1,
+                      width: '55%',
+                    }}
+                  >
+                    <div className="bg-black rounded-lg p-4 md:p-10 shadow-2xl h-[900px] md:h-[800px] flex items-center justify-center">
+                      <p 
+                        className="text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-center"
+                        dangerouslySetInnerHTML={{ 
+                          __html: `"${endorsement.text}"<br/><br/><span class="text-sm sm:text-base lg:text-lg">${endorsement.attribution}</span>` 
+                        }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
               
               {/* Previous Button */}
               <button
                 onClick={prevEndorsement}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all"
+                className="absolute left-0 md:left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-900 p-2 md:p-3 rounded-full transition-all z-20 shadow-lg focus:outline-none focus:ring-2 focus:ring-[#8E5B68]"
                 aria-label="Previous endorsement"
               >
-                <ChevronLeft size={24} />
+                <ChevronLeft size={24} aria-hidden="true" />
               </button>
               
               {/* Next Button */}
               <button
                 onClick={nextEndorsement}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all"
+                className="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-900 p-2 md:p-3 rounded-full transition-all z-20 shadow-lg focus:outline-none focus:ring-2 focus:ring-[#8E5B68]"
                 aria-label="Next endorsement"
               >
-                <ChevronRight size={24} />
+                <ChevronRight size={24} aria-hidden="true" />
               </button>
             </div>
             
@@ -176,8 +206,8 @@ export default function HomePage({ setCurrentPage }) {
                 <button
                   key={index}
                   onClick={() => setCurrentEndorsement(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentEndorsement ? 'bg-white w-8' : 'bg-white bg-opacity-50'
+                  className={`h-3 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#8E5B68] ${
+                    index === currentEndorsement ? 'bg-white w-8' : 'bg-white bg-opacity-50 w-3'
                   }`}
                   aria-label={`Go to endorsement ${index + 1}`}
                 />
@@ -214,14 +244,14 @@ export default function HomePage({ setCurrentPage }) {
                 </div>
               </a>
               <a
-                href="https://wgntv.com/morning-news/what-parents-need-to-know-about-the-new-season-of-13-reasons/"
+                href="https://wgntv.com/morning-news/michelle-epstein-shares-tips-on-coping-with-covid-19-stress-and-anxiety/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block relative"
               >
                 <img 
-                  src="/wgn2.png"
-                  alt="13 Reasons Why"
+                  src="/WGN2_NEW.png"
+                  alt="Coping with COVID-19 Stress and Anxiety"
                   className="w-full h-64 md:h-80 rounded-lg object-cover hover:opacity-90 transition-opacity"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">

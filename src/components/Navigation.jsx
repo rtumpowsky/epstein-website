@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Linkedin } from 'lucide-react';
+import ContactForm from './ContactForm';
 
 export default function Navigation({ currentPage, setCurrentPage }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +14,17 @@ export default function Navigation({ currentPage, setCurrentPage }) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close contact modal with Escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && isContactModalOpen) {
+        setIsContactModalOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isContactModalOpen]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" role="navigation" aria-label="Main navigation">
@@ -60,13 +73,13 @@ export default function Navigation({ currentPage, setCurrentPage }) {
             >
               Coaching
             </button>
-            <a
-              href="mailto:drmichelleepstein@gmail.com"
+            <button
+              onClick={() => setIsContactModalOpen(true)}
               className="text-lg font-semibold text-gray-900 hover:text-[#8E5B68] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:ring-offset-2 rounded"
-              aria-label="Email Dr. Michelle Epstein"
+              aria-label="Open contact form"
             >
               Contact
-            </a>
+            </button>
             <a
               href="https://www.linkedin.com/in/dr-michelle-a-epstein-phd/"
               target="_blank"
@@ -127,14 +140,17 @@ export default function Navigation({ currentPage, setCurrentPage }) {
             >
               Coaching
             </button>
-            <a
-              href="mailto:drmichelleepstein@gmail.com"
+            <button
+              onClick={() => {
+                setIsContactModalOpen(true);
+                setIsMobileMenuOpen(false);
+              }}
               className="block w-full text-left px-4 py-2 text-gray-900 hover:bg-gray-50 rounded focus:outline-none focus:ring-2 focus:ring-[#8E5B68]"
-              aria-label="Email Dr. Michelle Epstein"
+              aria-label="Open contact form"
               role="menuitem"
             >
               Contact
-            </a>
+            </button>
             <a
               href="https://www.linkedin.com/in/dr-michelle-a-epstein-phd/"
               target="_blank"
@@ -148,6 +164,39 @@ export default function Navigation({ currentPage, setCurrentPage }) {
           </div>
         )}
       </div>
+
+      {/* Contact Form Modal */}
+      {isContactModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="contact-modal-title"
+          onClick={() => setIsContactModalOpen(false)}
+        >
+          <div 
+            className="bg-white rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setIsContactModalOpen(false)}
+              className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68] z-10"
+              aria-label="Close contact form"
+            >
+              <X size={24} className="text-gray-700" aria-hidden="true" />
+            </button>
+
+            {/* Contact Form Content */}
+            <div className="p-6 md:p-10">
+              <h2 id="contact-modal-title" className="text-2xl md:text-3xl font-bold text-center text-black mb-6">
+                Contact Dr. Michelle
+              </h2>
+              <ContactForm context="general" />
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

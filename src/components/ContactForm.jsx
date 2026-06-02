@@ -158,6 +158,12 @@ export default function ContactForm({ context = 'therapy' }) {
           className="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:border-transparent transition-colors resize-none disabled:bg-gray-100"
         />
       </div>
+      
+      {/* HIPAA Disclaimer */}
+      <p className="text-sm md:text-base font-bold italic text-gray-700 text-center leading-relaxed">
+        Please do not send Protected Health Information (PHI) or any sensitive medical information via this form. The privacy of your (PHI) cannot be guaranteed. By pressing submit, you acknowledge these risks and consent to email correspondence with Dr. Michelle Epstein.
+      </p>
+      
       <button
         type="submit"
         disabled={status === 'submitting'}

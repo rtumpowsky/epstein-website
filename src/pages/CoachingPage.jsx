@@ -79,20 +79,20 @@ export default function CoachingPage() {
                   In addition, the <span className="font-bold">International Coaching Federation's</span> 2023 Global Study found that:
                 </p>
                 <ul className="space-y-3 ml-8">
-                  <li className="flex items-start space-x-3">
-                    <span className="text-2xl mt-1">•</span>
-                    <span><span className="font-bold">80%</span> of people who receive coaching report <span className="font-bold italic">increased self-confidence</span></span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-2xl mt-1">•</span>
-                    <span><span className="font-bold">70%</span> experience <span className="font-bold italic">improved work performance, relationships, and communication</span></span>
-                  </li>
-                  <p className="ml-5"> <span className="font-bold">AND</span></p>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-2xl mt-1">•</span>
-                    <span><span className="font-bold">96%</span> of clients say they would <span className="font-bold italic">repeat the coaching experience</span></span>
-                  </li>
-                </ul>
+              <li className="flex items-start space-x-3">
+                <span className="text-2xl mt-1">•</span>
+                <span><span className="font-bold italic">80%</span> of people who receive coaching report <span className="font-bold italic">increased self-confidence</span></span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <span className="text-2xl mt-1">•</span>
+                <span><span className="font-bold italic">70%</span> experience <span className="font-bold italic">improved work performance, relationships,</span> and <span className="font-bold italic">communication</span></span>
+              </li>
+              <p className="ml-5">AND</p>
+              <li className="flex items-start space-x-3">
+                <span className="text-2xl mt-1">•</span>
+                <span><span className="font-bold italic">96%</span> of clients say they would <span className="font-bold italic">repeat the coaching experience</span></span>
+              </li>
+            </ul>
               </div>
             </div>
           </div>
@@ -213,16 +213,16 @@ export default function CoachingPage() {
             <ul className="space-y-3 ml-8">
               <li className="flex items-start space-x-3">
                 <span className="text-2xl mt-1">•</span>
-                <span><span className="font-bold">80%</span> of people who receive coaching report <span className="font-bold italic">increased self-confidence</span></span>
+                <span><span className="font-bold italic">80%</span> of people who receive coaching report <span className="font-bold italic">increased self-confidence</span></span>
               </li>
               <li className="flex items-start space-x-3">
                 <span className="text-2xl mt-1">•</span>
-                <span><span className="font-bold">70%</span> experience <span className="font-bold italic">improved work performance, relationships, and communication</span></span>
+                <span><span className="font-bold italic">70%</span> experience <span className="font-bold italic">improved work performance, relationships,</span> and <span className="font-bold italic">communication</span></span>
               </li>
-              <p className="ml-5"> <span className="font-bold">AND</span></p>
+              <p className="ml-5">AND</p>
               <li className="flex items-start space-x-3">
                 <span className="text-2xl mt-1">•</span>
-                <span><span className="font-bold">96%</span> of clients say they would <span className="font-bold italic">repeat the coaching experience</span></span>
+                <span><span className="font-bold italic">96%</span> of clients say they would <span className="font-bold italic">repeat the coaching experience</span></span>
               </li>
             </ul>
           </div>
