@@ -251,7 +251,7 @@ export default function HomePage({ setCurrentPage }) {
               >
                 <img 
                   src="/WGN2_NEW.png"
-                  alt="13 Reasons Why"
+                  alt="COVID-19 Stress and Anxiety"
                   className="w-full h-64 md:h-80 rounded-lg object-cover hover:opacity-90 transition-opacity"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -261,7 +261,7 @@ export default function HomePage({ setCurrentPage }) {
                 </div>
               </a>
               <a
-                href="https://wgntv.com/morning-news/clinical-psychologist-dr-michelle-epstein-talks-mental-health-and-13-reasons-why/"
+                href="https://wgntv.com/morning-news/michelle-epstein-shares-tips-on-coping-with-covid-19-stress-and-anxiety/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block relative"
