@@ -7,7 +7,7 @@ export default function HomePage({ setCurrentPage }) {
   
   const endorsements = [
     {
-      text: "I found my work with Dr. Michelle Epstein to be incredibly productive and impactful. She offers thoughtful career guidance, practical tools, and highly valuable resources, while also creating space for deep listening, clarity, and meaningful reflection. Our sessions sharpened my thinking, helped me process information with greater ease, and enabled me to move forward with renewed confidence and purpose.",
+      text: "I found my work with Dr. Michelle Epstein to be incredibly productive and impactful. She offers thoughtful career guidance, practical tools, and highly valuable resources, while also creating space for deep listening, clarity, and meaningful reflection.<br></br> Our sessions sharpened my thinking, helped me process information with greater ease, and enabled me to move forward with renewed confidence and purpose.",
       attribution: "— Vice President, Corporate Philanthropy<br/>Fortune 500 Company"
     },
     {
@@ -147,7 +147,7 @@ export default function HomePage({ setCurrentPage }) {
         <div className="max-w-full mx-auto mb-16 px-2 md:px-4 pt-32 sm:pt-24 md:pt-12 lg:pt-4 pb-32 sm:pb-24 md:pb-12 lg:pb-4 overflow-x-hidden">
           <div className="relative max-w-7xl mx-auto">
             {/* Carousel Container with 3 slides visible */}
-            <div className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
+            <div className="relative min-h-[800px] flex items-center justify-center">
               {endorsements.map((endorsement, index) => {
                 const offset = index - currentEndorsement;
                 const isActive = index === currentEndorsement;
@@ -169,7 +169,7 @@ export default function HomePage({ setCurrentPage }) {
                       width: '55%',
                     }}
                   >
-                    <div className="bg-black rounded-lg p-4 md:p-8 lg:p-10 shadow-2xl min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
+                    <div className="bg-black rounded-lg p-4 md:p-8 lg:p-10 shadow-2xl min-h-[800px] flex items-center justify-center">
                       <p 
                         className="text-white font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed text-center"
                         dangerouslySetInnerHTML={{ 
@@ -201,7 +201,7 @@ export default function HomePage({ setCurrentPage }) {
             </div>
             
             {/* Dots Indicator */}
-            <div className="flex justify-center gap-3 mt-16 sm:mt-12 md:mt-8 lg:mt-6">
+            <div className="flex justify-center gap-3 mt-32 sm:mt-24 md:mt-8 lg:mt-6">
               {endorsements.map((_, index) => (
                 <button
                   key={index}
