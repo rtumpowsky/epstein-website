@@ -171,7 +171,7 @@ export default function ContactForm({ context = 'therapy' }) {
         aria-label={status === 'submitting' ? 'Sending message' : 'Send message'}
       >
         <Send size={18} aria-hidden="true" />
-        <span>{status === 'submitting' ? 'Sending...' : 'Send Message'}</span>
+        <span>{status === 'submitting' ? 'Sending...' : 'Submit'}</span>
       </button>
     </form>
   );

@@ -7,15 +7,15 @@ export default function HomePage({ setCurrentPage }) {
   
   const endorsements = [
     {
-      text: "I found my work with Dr. Michelle Epstein to be incredibly productive and impactful. She offers thoughtful career guidance, practical tools, and highly valuable resources, while also creating space for deep listening, clarity, and meaningful reflection.<br></br> Our sessions sharpened my thinking, helped me process information with greater ease, and enabled me to move forward with renewed confidence and purpose.",
-      attribution: "— Vice President, Corporate Philanthropy<br/>Fortune 500 Company"
+      text: "I found my work with Dr. Michelle Epstein to be incredibly productive and impactful. She offers thoughtful career guidance, practical tools, and highly valuable resources, while also creating space for deep listening, clarity, and meaningful reflection.<br></br>Our sessions sharpened my thinking, helped me process information with greater ease, and enabled me to move forward with renewed confidence and purpose.",
+      attribution: "— Vice President, Corporate Philanthropy<br/>Fortune 100 Company"
     },
     {
-      text: "As a Divisional President of a large organization, I am constantly confronting the pressures and complexities of executive leadership. Few people understand what that level of responsibility demands... but Michelle does.<br/><br/>As a Doctor of Psychology, she brings a rare depth to executive coaching. With an understanding of the science behind stress, emotion, and performance, she offers practical, strategic guidance for leaders operating in high-stakes environments.<br/><br/>During some of the most challenging periods of my leadership journey, she helped me gain clarity, regulate pressure, and navigate corporate dynamics with confidence and composure.<br/><br/>For any executive who wants to lead more powerfully and sustainably, I recommend her without hesitation.",
+      text: "As a Divisional President in a large corporation, I constantly confront the pressures and complexities of executive leadership. Few people truly understand those demands . . .  But Michelle does.<br/><br/>As a Doctor of Psychology, she brings a rare depth to executive coaching. By combining an understanding of the science behind stress, emotion, and performance, she offers practical, strategic guidance for high-stakes leaders.<br/><br/>During the most challenging periods of my leadership journey, she helped me gain clarity, manage pressure, and navigate corporate dynamics with confidence and composure. I recommend Michelle without hesitation to any executive wanting to lead more effectively and sustainably.",
       attribution: "— Division President & Former CEO<br/>Higher Education & E-Learning"
     },
     {
-      text: "Working with Michelle empowered me during a time of complex career and life decisions. Her sharp insight, deep empathy, and skill in asking precisely the right questions created a rare combination of thoughtful perspective and practical guidance.<br/><br/>Michelle helped me pause and step back, allowing me to think with greater intention and clarity. She supported me in making deliberate, courageous choices that truly aligned with my values and long-term goals. Her ability to listen deeply and \"cut through the noise\" enabled me to focus on what truly mattered, both professionally and personally.<br/><br/>I left every conversation with increased confidence and conviction in my decisions. I highly recommend Michelle as an invaluable coach for any executive navigating complexity, transitions, or critical inflection points.",
+      text: "My work with Michelle empowered me during a time of complex transitions. Her sharp insight, deep empathy, and skill in asking precisely the right questions created a rare combination of thoughtful perspective and practical guidance.<br/><br/>Michelle’s ability to listen deeply and \"cut through the noise\" helped me pause and reflect, allowing me to think with greater clarity and make deliberate choices that truly aligned with my values and long-term goals.<br/><br/>I left every conversation with increased confidence and conviction in my decisions. I highly recommend Michelle as an invaluable coach for any executive navigating complexity, transitions, or critical inflection points.",
       attribution: "— Associate Director, Client HR Operations<br/>Fortune Global 500 Company"
     }
   ];
@@ -29,7 +29,7 @@ export default function HomePage({ setCurrentPage }) {
   };
   
   return (
-    <div className="min-h-screen bg-[#8E5B68]">
+    <div className="min-h-screen bg-[#B87680]">
       {/* Name Banner - Grey/White */}
       <div className="bg-gray-100 pt-24 pb-8 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -121,8 +121,7 @@ export default function HomePage({ setCurrentPage }) {
           </button>
           <button
             onClick={() => setCurrentPage('coaching')}
-            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col"
-          >
+            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between text-center items-center">
             <div className="flex-1 flex flex-col">
               <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-black mb-2">Click here for</p>
               <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6 flex-1">
@@ -147,7 +146,7 @@ export default function HomePage({ setCurrentPage }) {
         <div className="max-w-full mx-auto mb-16 px-2 md:px-4 pt-12 pb-12 lg:pt-4 lg:pb-4 overflow-x-hidden">
           <div className="relative max-w-7xl mx-auto">
             {/* Carousel Container with 3 slides visible */}
-            <div className="relative min-h-[800px] flex items-center justify-center">
+            <div className="relative h-[700px] sm:h-[650px] md:h-[600px] lg:h-[650px] xl:h-[700px] flex items-center justify-center">
               {endorsements.map((endorsement, index) => {
                 const offset = index - currentEndorsement;
                 const isActive = index === currentEndorsement;
@@ -169,7 +168,7 @@ export default function HomePage({ setCurrentPage }) {
                       width: '55%',
                     }}
                   >
-                    <div className="bg-black rounded-lg p-4 md:p-8 lg:p-10 shadow-2xl min-h-[800px] flex items-center justify-center">
+                    <div className="bg-black rounded-lg p-4 md:p-8 lg:p-10 shadow-2xl h-[700px] sm:h-[650px] md:h-[600px] lg:h-[650px] xl:h-[700px] flex items-center justify-center">
                       <p 
                         className="text-white font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed text-center"
                         dangerouslySetInnerHTML={{ 
@@ -251,7 +250,7 @@ export default function HomePage({ setCurrentPage }) {
               >
                 <img 
                   src="/WGN2_NEW.png"
-                  alt="COVID-19 Stress and Anxiety"
+                  alt="13 Reasons Why"
                   className="w-full h-64 md:h-80 rounded-lg object-cover hover:opacity-90 transition-opacity"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -261,7 +260,7 @@ export default function HomePage({ setCurrentPage }) {
                 </div>
               </a>
               <a
-                href="https://wgntv.com/morning-news/michelle-epstein-shares-tips-on-coping-with-covid-19-stress-and-anxiety/"
+                href="https://wgntv.com/morning-news/clinical-psychologist-dr-michelle-epstein-talks-mental-health-and-13-reasons-why/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block relative"

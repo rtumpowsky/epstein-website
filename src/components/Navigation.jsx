@@ -28,7 +28,7 @@ export default function Navigation({ currentPage, setCurrentPage }) {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" role="navigation" aria-label="Main navigation">
-      <div className="max-w-7xl mx-auto pl-4 pr-4 md:pr-6 py-3 md:py-4">
+      <div className="max-w-[1450px] mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           <button 
             className="cursor-pointer text-left" 
@@ -184,7 +184,7 @@ export default function Navigation({ currentPage, setCurrentPage }) {
               className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68] z-10"
               aria-label="Close contact form"
             >
-              <X size={24} className="text-gray-700" aria-hidden="true" />
+              <X size={36} className="text-gray-700" aria-hidden="true" />
             </button>
 
             {/* Contact Form Content */}

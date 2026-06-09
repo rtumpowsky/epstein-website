@@ -39,7 +39,7 @@ export default function TherapyPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-28 pb-24 px-2 md:px-6 bg-[#8E5B68]">
+    <div className="min-h-screen pt-28 pb-24 px-2 md:px-6 bg-[#B87680]">
       {/* Mindset Matters Modal Popup */}
       {showMindsetModal && (
         <div 
@@ -59,7 +59,7 @@ export default function TherapyPage() {
               className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68]"
               aria-label="Close outcomes information"
             >
-              <X size={24} className="text-gray-700" aria-hidden="true" />
+              <X size={36} className="text-gray-700" aria-hidden="true" />
             </button>
 
             {/* Mindset Content */}

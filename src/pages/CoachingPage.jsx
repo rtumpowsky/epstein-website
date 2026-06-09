@@ -41,7 +41,7 @@ export default function CoachingPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-28 pb-24 px-2 md:px-6 bg-[#8E5B68]">
+    <div className="min-h-screen pt-28 pb-24 px-2 md:px-6 bg-[#B87680]">
       {/* ROI Modal Popup */}
       {showROIModal && (
         <div 
@@ -79,20 +79,20 @@ export default function CoachingPage() {
                   In addition, the <span className="font-bold">International Coaching Federation's</span> 2023 Global Study found that:
                 </p>
                 <ul className="space-y-3 ml-8">
-              <li className="flex items-start space-x-3">
-                <span className="text-2xl mt-1">•</span>
-                <span><span className="font-bold italic">80%</span> of people who receive coaching report <span className="font-bold italic">increased self-confidence</span></span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <span className="text-2xl mt-1">•</span>
-                <span><span className="font-bold italic">70%</span> experience <span className="font-bold italic">improved work performance, relationships,</span> and <span className="font-bold italic">communication</span></span>
-              </li>
-              <p className="ml-5">AND</p>
-              <li className="flex items-start space-x-3">
-                <span className="text-2xl mt-1">•</span>
-                <span><span className="font-bold italic">96%</span> of clients say they would <span className="font-bold italic">repeat the coaching experience</span></span>
-              </li>
-            </ul>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-2xl mt-1">•</span>
+                    <span><span className="font-bold">80%</span> of people who receive coaching report <span className="font-bold italic">increased self-confidence</span></span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-2xl mt-1">•</span>
+                    <span><span className="font-bold">70%</span> experience <span className="font-bold italic">improved work performance, relationships, and communication</span></span>
+                  </li>
+                  <p className="ml-5"> <span className="font-bold">AND</span></p>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-2xl mt-1">•</span>
+                    <span><span className="font-bold">96%</span> of clients say they would <span className="font-bold italic">repeat the coaching experience</span></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -111,6 +111,13 @@ export default function CoachingPage() {
         {/* Main Content - WHITE BOX with intro paragraphs and image */}
         <div className="bg-white rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-start mb-6">
+            {/* Image - Right side (top on mobile) */}
+            <img
+              src="/headshot3.jpg"
+              alt="Dr. Michelle A. Epstein"
+              className="w-full max-w-md mx-auto lg:max-w-sm rounded-lg shadow-xl self-center order-first lg:order-last"
+            />
+
             {/* Text - first 3 paragraphs */}
             <div className="space-y-6 text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 leading-relaxed">
               <p>
@@ -123,13 +130,6 @@ export default function CoachingPage() {
                 <span className="font-bold italic">A deeply attentive, curious</span> and <span className="font-bold italic">thoughtful</span> listener, who offers non-judgmental, supportive insights, Michelle acts as a "mirror" to help clients see themselves with deeper clarity. She then skillfully crafts each session to provide <span className="font-bold italic">highly individualized</span> and <span className="font-bold italic">solution-focused</span> coaching that is specifically tailored to productively meet each client's unique needs.
               </p>
             </div>
-
-            {/* Image - Right side */}
-            <img
-              src="/headshot3.jpg"
-              alt="Dr. Michelle A. Epstein"
-              className="w-full max-w-md mx-auto lg:max-w-sm rounded-lg shadow-xl self-center"
-            />
           </div>
           
           {/* Fourth paragraph - spans full width below */}
@@ -213,16 +213,16 @@ export default function CoachingPage() {
             <ul className="space-y-3 ml-8">
               <li className="flex items-start space-x-3">
                 <span className="text-2xl mt-1">•</span>
-                <span><span className="font-bold italic">80%</span> of people who receive coaching report <span className="font-bold italic">increased self-confidence</span></span>
+                <span><span className="font-bold">80%</span> of people who receive coaching report <span className="font-bold italic">increased self-confidence</span></span>
               </li>
               <li className="flex items-start space-x-3">
                 <span className="text-2xl mt-1">•</span>
-                <span><span className="font-bold italic">70%</span> experience <span className="font-bold italic">improved work performance, relationships,</span> and <span className="font-bold italic">communication</span></span>
+                <span><span className="font-bold">70%</span> experience <span className="font-bold italic">improved work performance, relationships, and communication</span></span>
               </li>
-              <p className="ml-5">AND</p>
+              <p className="ml-5"> <span className="font-bold">AND</span></p>
               <li className="flex items-start space-x-3">
                 <span className="text-2xl mt-1">•</span>
-                <span><span className="font-bold italic">96%</span> of clients say they would <span className="font-bold italic">repeat the coaching experience</span></span>
+                <span><span className="font-bold">96%</span> of clients say they would <span className="font-bold italic">repeat the coaching experience</span></span>
               </li>
             </ul>
           </div>

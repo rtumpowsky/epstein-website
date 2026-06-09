@@ -90,3 +90,8 @@ textarea:focus:not(:focus-visible) {
     scroll-behavior: auto !important;
   }
 }
+@media (min-width: 1024px) {
+  body {
+    zoom: .8;
+  }
+}
