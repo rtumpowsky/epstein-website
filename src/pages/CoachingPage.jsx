@@ -61,7 +61,7 @@ export default function CoachingPage() {
               className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68]"
               aria-label="Close ROI information"
             >
-              <X size={24} className="text-gray-700" aria-hidden="true" />
+              <X size={36} className="text-gray-700" aria-hidden="true" />
             </button>
 
             {/* ROI Content */}
