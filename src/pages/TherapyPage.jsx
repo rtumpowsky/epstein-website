@@ -14,17 +14,6 @@ export default function TherapyPage() {
     }
   }, []);
 
-  // Close modal with Escape key
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape' && showMindsetModal) {
-        setShowMindsetModal(false);
-      }
-    };
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
-  }, [showMindsetModal]);
-
   const subspecialties = [
     "Anxiety & Depression",
     "Couples Therapy",
@@ -42,39 +31,30 @@ export default function TherapyPage() {
     <div className="min-h-screen pt-28 pb-24 px-2 md:px-6 bg-[#B87680]">
       {/* Mindset Matters Modal Popup */}
       {showMindsetModal && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="mindset-modal-title"
-          onClick={() => setShowMindsetModal(false)}
-        >
-          <div 
-            className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
             {/* Close Button */}
             <button
               onClick={() => setShowMindsetModal(false)}
-              className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68]"
-              aria-label="Close outcomes information"
+              className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
+              aria-label="Close"
             >
-              <X size={36} className="text-gray-700" aria-hidden="true" />
+              <X size={24} className="text-gray-700" />
             </button>
 
             {/* Mindset Content */}
             <div className="p-8 md:p-12">
-              <h2 id="mindset-modal-title" className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[#8E5B68] mb-6" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[#8E5B68] mb-6" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
                 OUTCOMES
               </h2>
-              <div className="w-32 h-1 bg-[#8E5B68] mx-auto mb-8" aria-hidden="true"></div>
+              <div className="w-32 h-1 bg-[#8E5B68] mx-auto mb-8"></div>
               
               <div className="space-y-6 text-2xl md:text-3xl text-gray-900 leading-relaxed">
                 <p>
-                  Collaborative talk therapies, such as <span className="font-bold italic">Cognitive Behavioral Therapy (CBT)</span>, emphasize cognitive (mindset) restructuring, skill development, and behavioral change with <span className="font-bold italic">demonstrated effectiveness</span> in treating depression, anxiety, stress, and other emotional disorders. <span className="font-bold italic">Average symptom improvement</span> ranges from <span className="font-bold italic">50-80%</span> across conditions.
+                  Collaborative talk therapies, such as <span className="font-bold italic">Cognitive Behavioral Therapy (CBT)</span>, emphasize cognitive (mindset) restructuring, skill development, and behavioral change with <span className="font-bold italic">demonstrated effectiveness</span> in treating depression, anxiety, stress, and other emotional disorders. <span className="font-bold">Average symptom improvement</span> ranges from <span className="font-bold">50-80%</span> across conditions.
                 </p>
                 <p>
-                  Unlike medication, CBT <span className="font-bold italic">avoids</span> common pharmacological <span className="font-bold italic">side effects</span> AND has <span className="font-bold italic">strong long-term durability</span>, showing lasting benefits after therapy ends: CBT has low relapse rates <span className="italic">(20-35%)</span>, as compared with medication discontinuation alone <span className="italic">(60-80% relapse)</span>.
+                  Unlike medication, CBT <span className="font-bold italic">avoids</span> common pharmacological <span className="font-bold">side effects</span> AND has <span className="font-bold italic">strong long-term durability</span>, showing lasting benefits after therapy ends: CBT has low relapse rates (20-35%), as compared with medication discontinuation alone (60-80% relapse).
                 </p>
               </div>
             </div>
@@ -103,7 +83,7 @@ export default function TherapyPage() {
           {/* All text - wraps around the image on desktop */}
           <div className="space-y-6 text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 leading-relaxed">
             <p>
-              <span className="font-bold italic">Mindset matters . . . and it's all a matter of mindset . . .</span>
+              <span className="font-bold italic">Mindset matters...and it's all a matter of mindset...</span>
             </p>
             <p>
               Dr. Michelle brings <span className="font-bold italic">more than 30 years of professional experience</span> to her work as a Licensed Clinical Psychologist and Board Certified Executive & Leadership Coach, allowing her to provide <span className="font-bold italic">highly individualized</span> care that is tailored to meet each client's unique needs.
@@ -184,10 +164,10 @@ export default function TherapyPage() {
         <div className="bg-white rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           <div className="space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-900 leading-relaxed">
             <p>
-                  Collaborative talk therapies, such as <span className="font-bold italic">Cognitive Behavioral Therapy (CBT)</span>, emphasize cognitive (mindset) restructuring, skill development, and behavioral change with <span className="font-bold italic">demonstrated effectiveness</span> in treating depression, anxiety, stress, and other emotional disorders. <span className="font-bold italic">Average symptom improvement</span> ranges from <span className="font-bold italic">50-80%</span> across conditions.
+                  Collaborative talk therapies, such as <span className="font-bold italic">Cognitive Behavioral Therapy (CBT)</span>, emphasize cognitive (mindset) restructuring, skill development, and behavioral change with <span className="font-bold italic">demonstrated effectiveness</span> in treating depression, anxiety, stress, and other emotional disorders. <span className="font-bold">Average symptom improvement</span> ranges from <span className="font-bold">50-80%</span> across conditions.
                 </p>
                 <p>
-                  Unlike medication, CBT <span className="font-bold italic">avoids</span> common pharmacological <span className="font-bold italic">side effects</span> AND has <span className="font-bold italic">strong long-term durability</span>, showing lasting benefits after therapy ends: CBT has low relapse rates <span className="italic">(20-35%)</span>, as compared with medication discontinuation alone <span className="italic">(60-80% relapse)</span>.
+                  Unlike medication, CBT <span className="font-bold italic">avoids</span> common pharmacological <span className="font-bold">side effects</span> AND has <span className="font-bold italic">strong long-term durability</span>, showing lasting benefits after therapy ends: CBT has low relapse rates (20-35%), as compared with medication discontinuation alone (60-80% relapse).
                 </p>
           </div>
         </div>
@@ -195,7 +175,7 @@ export default function TherapyPage() {
         {/* "Together we can..." - Large WHITE ITALIC CAMBRIA on wine background */}
         <div className="text-center my-16 px-2">
           <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold italic text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
-            Together we can turn Insight into Action . . .<br/>and Action into Meaningful Impact
+            Together we can turn <br className="md:hidden" />Insight into Action . . .<br/>and Action into Meaningful Impact
           </h2>
         </div>
 
@@ -215,10 +195,9 @@ export default function TherapyPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
               <a
                 href="mailto:drmichelleepstein@gmail.com"
-                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:ring-offset-2"
-                aria-label="Send email to Dr. Michelle Epstein"
+                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
               >
-                <Mail size={36} className="text-[#8E5B68] flex-shrink-0" aria-hidden="true" />
+                <Mail size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div className="min-w-0">
                   <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Email</p>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
@@ -226,10 +205,9 @@ export default function TherapyPage() {
               </a>
               <a
                 href="tel:847-702-8777"
-                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:ring-offset-2"
-                aria-label="Call or text Dr. Michelle Epstein at 847-702-8777"
+                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
               >
-                <Phone size={36} className="text-[#8E5B68] flex-shrink-0" aria-hidden="true" />
+                <Phone size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Voice or Text</p>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-black">847-702-8777</p>

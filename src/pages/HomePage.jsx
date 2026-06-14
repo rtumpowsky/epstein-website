@@ -48,23 +48,23 @@ export default function HomePage({ setCurrentPage }) {
       <div className="py-12 px-2">
         <div className="max-w-full mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold italic text-white mb-12" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
-            Control your narrative . . . or it will control you . . .
+            Control your narrative . . . <br className="md:hidden" />or it will control you . . .
           </h2>
         </div>
  
         {/* Image and Bio Section */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-2 md:px-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-2 md:px-4 items-stretch">
           {/* Image - Left Side */}
-          <div className="flex items-start">
+          <div className="flex">
             <img
               src="/headshot1.png"
               alt="Dr. Michelle A. Epstein"
-              className="w-full rounded-lg shadow-2xl"
+              className="w-full h-full object-cover rounded-lg shadow-2xl"
             />
           </div>
  
           {/* Bio - Right Side - Black Box with White Text in Cambria - CORRECTED BOLDING */}
-          <div className="bg-black p-4 md:p-10 rounded-lg shadow-2xl flex items-center">
+          <div className="bg-black p-4 md:p-8 rounded-lg shadow-2xl flex items-center">
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
               As a Harvard-trained Clinical Psychologist and Executive/Leadership Coach with over 30 years of experience, Michelle possesses the unique and invaluable ability to blend <span className="font-bold italic">astute psychological insight</span> with <span className="font-bold italic">proven leadership strategies.</span> This approach allows her clients to examine their personal narratives and cut through internal "noise" to build greater self-awareness, shift unproductive mindsets, and empower <span className="font-bold italic">lasting, measurable improvements</span> in mental health, relationships, productivity, impact, and overall well-being.
             </p>
@@ -72,7 +72,7 @@ export default function HomePage({ setCurrentPage }) {
         </div>
 
         <h3 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold italic text-white mb-12 px-2 md:px-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
-                "Language does not merely depict reality . . . it actively constructs it."
+                "Language does not merely depict reality . . . <br className="md:hidden" />it actively constructs it."
         </h3>
         <br />
  

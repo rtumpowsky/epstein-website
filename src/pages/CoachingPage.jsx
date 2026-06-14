@@ -13,17 +13,6 @@ export default function CoachingPage() {
       sessionStorage.setItem('hasSeenROIPopup', 'true');
     }
   }, []);
-
-  // Close modal with Escape key
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape' && showROIModal) {
-        setShowROIModal(false);
-      }
-    };
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
-  }, [showROIModal]);
   
   const subspecialties = [
     "Mindset Shifts",
@@ -44,32 +33,23 @@ export default function CoachingPage() {
     <div className="min-h-screen pt-28 pb-24 px-2 md:px-6 bg-[#B87680]">
       {/* ROI Modal Popup */}
       {showROIModal && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="roi-modal-title"
-          onClick={() => setShowROIModal(false)}
-        >
-          <div 
-            className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
             {/* Close Button */}
             <button
               onClick={() => setShowROIModal(false)}
-              className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68]"
-              aria-label="Close ROI information"
+              className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
+              aria-label="Close"
             >
-              <X size={36} className="text-gray-700" aria-hidden="true" />
+              <X size={24} className="text-gray-700" />
             </button>
 
             {/* ROI Content */}
             <div className="p-8 md:p-12">
-              <h2 id="roi-modal-title" className="text-4xl md:text-5xl font-bold text-center text-[#8E5B68] mb-6" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+              <h2 className="text-4xl md:text-5xl font-bold text-center text-[#8E5B68] mb-6" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
                 RETURN ON INVESTMENT
               </h2>
-              <div className="w-32 h-1 bg-[#8E5B68] mx-auto mb-8" aria-hidden="true"></div>
+              <div className="w-32 h-1 bg-[#8E5B68] mx-auto mb-8"></div>
               
               <div className="space-y-6 text-2xl md:text-3xl text-gray-900 leading-relaxed">
                 <p>
@@ -85,9 +65,9 @@ export default function CoachingPage() {
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-2xl mt-1">•</span>
-                    <span><span className="font-bold">70%</span> experience <span className="font-bold italic">improved work performance, relationships, and communication</span></span>
+                    <span><span className="font-bold">70%</span> experience <span className="font-bold italic">improved work performance, relationships,</span> and <span className="font-bold italic">communication</span></span>
                   </li>
-                  <p className="ml-5"> <span className="font-bold">AND</span></p>
+                  <p className="ml-5"> AND</p>
                   <li className="flex items-start space-x-3">
                     <span className="text-2xl mt-1">•</span>
                     <span><span className="font-bold">96%</span> of clients say they would <span className="font-bold italic">repeat the coaching experience</span></span>
@@ -108,34 +88,30 @@ export default function CoachingPage() {
           <div className="w-32 h-1 bg-white mx-auto"></div>
       </div>
 
-        {/* Main Content - WHITE BOX with intro paragraphs and image */}
+        {/* Main Content */}
         <div className="bg-white rounded-lg p-4 md:p-12 shadow-2xl mb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-start mb-6">
-            {/* Image - Right side (top on mobile) */}
-            <img
-              src="/headshot3.jpg"
-              alt="Dr. Michelle A. Epstein"
-              className="w-full max-w-md mx-auto lg:max-w-sm rounded-lg shadow-xl self-center order-first lg:order-last"
-            />
-
-            {/* Text - first 3 paragraphs */}
-            <div className="space-y-6 text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 leading-relaxed">
-              <p>
-                <span className="font-bold italic">Leadership demands can create stress and distraction, leaving even the most talented and capable executives feeling overwhelmed . . .</span>
-              </p>
-              <p>
-                As a Licensed Clinical Psychologist and Board Certified Executive & Leadership Coach, Michelle relies on <span className="font-bold italic">more than 30 years of professional experience</span>, and possesses the unique and invaluable ability to blend <span className="font-bold italic">astute psychological insight</span> with <span className="font-bold italic">proven leadership strategies</span>.
-              </p>
-              <p>
-                <span className="font-bold italic">A deeply attentive, curious</span> and <span className="font-bold italic">thoughtful</span> listener, who offers non-judgmental, supportive insights, Michelle acts as a "mirror" to help clients see themselves with deeper clarity. She then skillfully crafts each session to provide <span className="font-bold italic">highly individualized</span> and <span className="font-bold italic">solution-focused</span> coaching that is specifically tailored to productively meet each client's unique needs.
-              </p>
-            </div>
-          </div>
+          {/* Image - Floated right so text wraps around it */}
+          <img
+            src="/headshot3.jpg"
+            alt="Dr. Michelle A. Epstein"
+            className="w-full md:w-[350px] rounded-lg shadow-xl md:float-right md:ml-8 mb-6"
+          />
           
-          {/* Fourth paragraph - spans full width below */}
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 leading-relaxed">
-            She strives to offer <span className="font-bold italic">something of value</span> in every session, supporting professionals as they cut through their internal "noise" to build greater self-awareness, shift unproductive mindsets, and develop high-impact habits that allow them to manage time and stress more effectively, make sharper decisions, and lead with greater influence, impact and fulfillment. This approach allows her clients to not only enhance their professional performance, but also create <span className="font-bold italic">lasting</span> and <span className="font-bold italic">measurable</span> improvements in their physical health, emotional well-being, personal and professional relationships, and overall sense of purpose.
-          </p>
+          {/* All text - wraps around the image on desktop */}
+          <div className="space-y-6 text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 leading-relaxed">
+            <p>
+              <span className="font-bold italic">Leadership demands can create stress and distraction, leaving even the most talented and capable executives feeling overwhelmed . . .</span>
+            </p>
+            <p>
+              As a Licensed Clinical Psychologist and Board Certified Executive & Leadership Coach, Michelle relies on <span className="font-bold italic">more than 30 years of professional experience</span>, and possesses the unique and invaluable ability to blend <span className="font-bold italic">astute psychological insight</span> with <span className="font-bold italic">proven leadership strategies</span>.
+            </p>
+            <p>
+              <span className="font-bold italic">A deeply attentive, curious</span> and <span className="font-bold italic">thoughtful</span> listener, who offers non-judgmental, supportive insights, Michelle acts as a "mirror" to help clients see themselves with deeper clarity. She then skillfully crafts each session to provide <span className="font-bold italic">highly individualized</span> and <span className="font-bold italic">solution-focused</span> coaching that is specifically tailored to productively meet each client's unique needs.
+            </p>
+            <p>
+              She strives to offer <span className="font-bold italic">something of value</span> in every session, supporting professionals as they cut through their internal "noise" to build greater self-awareness, shift unproductive mindsets, and develop high-impact habits that allow them to manage time and stress more effectively, make sharper decisions, and lead with greater influence, impact and fulfillment. This approach allows her clients to not only enhance their professional performance, but also create <span className="font-bold italic">lasting</span> and <span className="font-bold italic">measurable</span> improvements in their physical health, emotional well-being, personal and professional relationships, and overall sense of purpose.
+            </p>
+          </div>
         </div>
 
         {/* Education & Training - BLACK BOX with WHITE BOLD text */}
@@ -217,9 +193,9 @@ export default function CoachingPage() {
               </li>
               <li className="flex items-start space-x-3">
                 <span className="text-2xl mt-1">•</span>
-                <span><span className="font-bold">70%</span> experience <span className="font-bold italic">improved work performance, relationships, and communication</span></span>
+                <span><span className="font-bold">70%</span> experience <span className="font-bold italic">improved work performance, relationships,</span> and <span className="font-bold italic">communication</span></span>
               </li>
-              <p className="ml-5"> <span className="font-bold">AND</span></p>
+              <p className="ml-5"> AND</p>
               <li className="flex items-start space-x-3">
                 <span className="text-2xl mt-1">•</span>
                 <span><span className="font-bold">96%</span> of clients say they would <span className="font-bold italic">repeat the coaching experience</span></span>
@@ -251,10 +227,9 @@ export default function CoachingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
               <a
                 href="mailto:drmichelleepstein@gmail.com"
-                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:ring-offset-2"
-                aria-label="Send email to Dr. Michelle Epstein"
+                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
               >
-                <Mail size={36} className="text-[#8E5B68] flex-shrink-0" aria-hidden="true" />
+                <Mail size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div className="min-w-0">
                   <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Email</p>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
@@ -262,10 +237,9 @@ export default function CoachingPage() {
               </a>
               <a
                 href="tel:847-702-8777"
-                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:ring-offset-2"
-                aria-label="Call or text Dr. Michelle Epstein at 847-702-8777"
+                className="flex items-center space-x-4 p-6 md:p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
               >
-                <Phone size={36} className="text-[#8E5B68] flex-shrink-0" aria-hidden="true" />
+                <Phone size={36} className="text-[#8E5B68] flex-shrink-0" />
                 <div>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Voice or Text</p>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-black">847-702-8777</p>
