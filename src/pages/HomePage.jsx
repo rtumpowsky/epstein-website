@@ -71,7 +71,7 @@ export default function HomePage({ setCurrentPage }) {
           </div>
         </div>
 
-        <h3 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold italic text-white mb-12 px-2 md:px-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+        <h3 className="text-center text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold italic text-white mb-12 px-2 md:px-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
                 "Language does not merely depict reality . . . <br className="md:hidden" />it actively constructs it."
         </h3>
         <br />
