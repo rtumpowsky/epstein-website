@@ -31,11 +31,11 @@ export default function Navigation({ currentPage, setCurrentPage }) {
       <div className="max-w-[1450px] mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           <button 
-            className="cursor-pointer text-left" 
+            className="cursor-pointer text-left flex-shrink-0" 
             onClick={() => setCurrentPage('home')}
             aria-label="Go to home page"
           >
-            <h1 className="text-base sm:text-lg md:text-2xl font-bold text-gray-900">Dr. Michelle A. Epstein, PhD</h1>
+            <h1 className="text-sm sm:text-base md:text-xl lg:text-2xl font-bold text-gray-900 whitespace-nowrap">Dr. Michelle A. Epstein, PhD</h1>
             <p className="text-xs md:text-sm text-gray-600">Licensed Clinical Psychologist</p>
           </button>
 
