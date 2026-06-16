@@ -41,7 +41,7 @@ export default function CoachingPage() {
               className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
               aria-label="Close"
             >
-              <X size={24} className="text-gray-700" />
+              <X size={36} className="text-gray-700" />
             </button>
 
             {/* ROI Content */}
