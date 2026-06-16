@@ -107,7 +107,8 @@ export default function HomePage({ setCurrentPage }) {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 px-4 items-stretch">
           <button
             onClick={() => setCurrentPage('therapy')}
-            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col"
+            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:ring-offset-2"
+            aria-label="Go to Clinical Therapy page"
           >
             <div className="flex-1 flex flex-col">
               <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-black mb-2">Click here for</p>
@@ -121,7 +122,8 @@ export default function HomePage({ setCurrentPage }) {
           </button>
           <button
             onClick={() => setCurrentPage('coaching')}
-            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between text-center items-center">
+            className="bg-white border-4 border-gray-600 shadow-[0_0_0_4px_#8E5B68] rounded-lg p-6 md:p-12 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between text-center items-center focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:ring-offset-2"
+            aria-label="Go to Executive Coaching page">
             <div className="flex-1 flex flex-col">
               <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-black mb-2">Click here for</p>
               <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6 flex-1">
@@ -320,9 +322,10 @@ export default function HomePage({ setCurrentPage }) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
               <a
                 href="mailto:drmichelleepstein@gmail.com"
-                className="flex items-center space-x-4 p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
+                className="flex items-center space-x-4 p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:ring-offset-2"
+                aria-label="Send email to Dr. Michelle Epstein"
               >
-                <Mail size={36} className="text-[#8E5B68] flex-shrink-0" />
+                <Mail size={36} className="text-[#8E5B68] flex-shrink-0" aria-hidden="true" />
                 <div className="min-w-0">
                   <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Email</p>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-black break-all">drmichelleepstein@gmail.com</p>
@@ -330,9 +333,10 @@ export default function HomePage({ setCurrentPage }) {
               </a>
               <a
                 href="tel:847-702-8777"
-                className="flex items-center space-x-4 p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors"
+                className="flex items-center space-x-4 p-8 bg-[#F5E6E8] border-2 border-[#8E5B68] rounded-lg hover:bg-[#EBD6D9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8E5B68] focus:ring-offset-2"
+                aria-label="Call or text Dr. Michelle Epstein at 847-702-8777"
               >
-                <Phone size={36} className="text-[#8E5B68] flex-shrink-0" />
+                <Phone size={36} className="text-[#8E5B68] flex-shrink-0" aria-hidden="true" />
                 <div>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-gray-700">Voice or Text</p>
                   <p className="text-xs sm:text-base md:text-xl font-bold text-black">847-702-8777</p>
