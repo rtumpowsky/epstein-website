@@ -48,7 +48,7 @@ export default function HomePage({ setCurrentPage }) {
       <div className="py-12 px-2">
         <div className="max-w-full mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold italic text-white mb-12" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
-            Control your narrative . . . <br className="md:hidden" />or it will control you . . .
+            Control your narrative . . . <br className="lg:hidden" />or it will control you . . .
           </h2>
         </div>
  
@@ -71,7 +71,7 @@ export default function HomePage({ setCurrentPage }) {
           </div>
         </div>
 
-        <h3 className="text-center text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold italic text-white mb-12 px-2 md:px-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+        <h3 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold italic text-white mb-12 px-2 md:px-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
                 "Language does not merely depict reality . . . <br className="md:hidden" />it actively constructs it."
         </h3>
         <br />

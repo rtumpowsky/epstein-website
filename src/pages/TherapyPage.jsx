@@ -51,10 +51,10 @@ export default function TherapyPage() {
               
               <div className="space-y-6 text-2xl md:text-3xl text-gray-900 leading-relaxed">
                 <p>
-                  Collaborative talk therapies, such as <span className="font-bold italic">Cognitive Behavioral Therapy (CBT)</span>, emphasize cognitive (mindset) restructuring, skill development, and behavioral change with <span className="font-bold italic">demonstrated effectiveness</span> in treating depression, anxiety, stress, and other emotional disorders. <span className="font-bold">Average symptom improvement</span> ranges from <span className="font-bold">50-80%</span> across conditions.
+                  Collaborative talk therapies, such as <span className="font-bold italic">Cognitive Behavioral Therapy (CBT)</span>, emphasize cognitive (mindset) restructuring, skill development, and behavioral change with <span className="font-bold italic">demonstrated effectiveness</span> in treating depression, anxiety, stress, and other emotional disorders. <span className="font-bold italic">Average symptom improvement</span> ranges from <span className="font-bold italic">50-80%</span> across conditions.
                 </p>
                 <p>
-                  Unlike medication, CBT <span className="font-bold italic">avoids</span> common pharmacological <span className="font-bold">side effects</span> AND has <span className="font-bold italic">strong long-term durability</span>, showing lasting benefits after therapy ends: CBT has low relapse rates (20-35%), as compared with medication discontinuation alone (60-80% relapse).
+                  Unlike medication, CBT <span className="font-bold italic">avoids</span> common pharmacological <span className="font-bold italic">side effects</span> AND has <span className="font-bold italic">strong long-term durability</span>, showing lasting benefits after therapy ends: CBT has low relapse rates (20-35%), as compared with medication discontinuation alone (60-80% relapse).
                 </p>
               </div>
             </div>
@@ -164,17 +164,17 @@ export default function TherapyPage() {
         <div className="bg-white rounded-lg p-4 md:p-12 shadow-2xl mb-12">
           <div className="space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-900 leading-relaxed">
             <p>
-                  Collaborative talk therapies, such as <span className="font-bold italic">Cognitive Behavioral Therapy (CBT)</span>, emphasize cognitive (mindset) restructuring, skill development, and behavioral change with <span className="font-bold italic">demonstrated effectiveness</span> in treating depression, anxiety, stress, and other emotional disorders. <span className="font-bold">Average symptom improvement</span> ranges from <span className="font-bold">50-80%</span> across conditions.
+                  Collaborative talk therapies, such as <span className="font-bold italic">Cognitive Behavioral Therapy (CBT)</span>, emphasize cognitive (mindset) restructuring, skill development, and behavioral change with <span className="font-bold italic">demonstrated effectiveness</span> in treating depression, anxiety, stress, and other emotional disorders. <span className="font-bold italic">Average symptom improvement</span> ranges from <span className="font-bold italic">50-80%</span> across conditions.
                 </p>
                 <p>
-                  Unlike medication, CBT <span className="font-bold italic">avoids</span> common pharmacological <span className="font-bold">side effects</span> AND has <span className="font-bold italic">strong long-term durability</span>, showing lasting benefits after therapy ends: CBT has low relapse rates (20-35%), as compared with medication discontinuation alone (60-80% relapse).
+                  Unlike medication, CBT <span className="font-bold italic">avoids</span> common pharmacological <span className="font-bold italic">side effects</span> AND has <span className="font-bold italic">strong long-term durability</span>, showing lasting benefits after therapy ends: CBT has low relapse rates (20-35%), as compared with medication discontinuation alone (60-80% relapse).
                 </p>
           </div>
         </div>
 
         {/* "Together we can..." - Large WHITE ITALIC CAMBRIA on wine background */}
         <div className="text-center my-16 px-2">
-          <h2 className="text-md sm:text-3xl lg:text-5xl xl:text-6xl font-bold italic text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h2 className="text-md sm:text-3xl md:text-2xl lg:text-5xl xl:text-6xl font-bold italic text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             Together we can turn <br className="md:hidden" />Insight into Action . . .<br/>and Action into Meaningful Impact
           </h2>
         </div>

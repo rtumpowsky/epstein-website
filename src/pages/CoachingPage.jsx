@@ -56,7 +56,7 @@ export default function CoachingPage() {
                   A Metrix Global study found that Executive Coaching has a staggering <span className="font-bold italic">788% return on investment (ROI)</span>, as seen in enhanced work performance, improved collaboration, increases in revenue, and greater employee retention.
                 </p>
                 <p>
-                  In addition, the <span className="font-bold">International Coaching Federation's</span> 2023 Global Study found that:
+                  In addition, the <span className="font-bold italic">International Coaching Federation's</span> 2023 Global Study found that:
                 </p>
                 <ul className="space-y-3 ml-8">
                   <li className="flex items-start space-x-3">
@@ -184,7 +184,7 @@ export default function CoachingPage() {
               A Metrix Global study found that Executive Coaching has a staggering <span className="font-bold italic">788% return on investment (ROI)</span>, as seen in enhanced work performance, improved collaboration, increases in revenue, and greater employee retention.
             </p>
             <p>
-              In addition, the <span className="font-bold">International Coaching Federation's</span> 2023 Global Study found that:
+              In addition, the <span className="font-bold italic">International Coaching Federation's</span> 2023 Global Study found that:
             </p>
             <ul className="space-y-3 ml-8">
               <li className="flex items-start space-x-3">
@@ -206,7 +206,7 @@ export default function CoachingPage() {
 
         {/* "Together we can..." - Large WHITE ITALIC CAMBRIA on wine background */}
         <div className="text-center my-16 px-2">
-          <h2 className="text-md sm:text-3xl lg:text-5xl xl:text-6xl font-bold italic text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
+          <h2 className="text-md sm:text-3xl md:text-2xl lg:text-5xl xl:text-6xl font-bold italic text-white mb-4" style={{ fontFamily: 'Cambria, Georgia, serif' }}>
             Together we can turn Peak Potential . . .<br/>into Peak Performance
           </h2>
         </div>
